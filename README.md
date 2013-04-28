@@ -16,20 +16,31 @@ several of them in the process.
 
 Requirements
 ============
-- A working [drush](https://drupal.org/project/drush) installation.
 - Meet the Drupal [system requirements](https://drupal.org/requirements).
+
+- A working [drush](https://drupal.org/project/drush) installation.
+
+- git.
 
 Instructions
 ============
 
-- Place the profiles folder in an empty directory where you want to install your
-new Drupal website.
+- Work in a folder where you want to install you Drupal Remix.
 
-- On the command line, run:
+- Clone Drupal Remix:
+
+    git clone git://github.com/RiaanBurger/drupal-remix.git
+    
+- You just want the profiles folder:
+
+    mv drupal-remix/profiles ./
+    rm -Rf drupal-remix/
+    
+- Now run drush make ont he profile:
 
     drush make profiles/remix/remix.make
-
-- Access your website in the browser to complete your Drupal installation.
+    
+- Access your website in the browser to complete your Drupal Remix installation.
 
 - Update the website, run:
 
