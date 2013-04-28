@@ -1,0 +1,134 @@
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │       ______                                                               │
+; │      //   ) )   Burtronix.co.za Drupal 7 Remix Profile                     │
+; │     //___/ /            __    __  ___  __      ___       __     ( )        │
+; │    / __  (   //   / / //  ) )  / /   //  ) ) //   ) ) //   ) ) / / \\ / /  │
+; │   //    ) ) //   / / //       / /   //      //   / / //   / / / /   \/ /   │
+; │  //____/ / ((___( ( //       / /   //      ((___/ / //   / / / /    / /\   │
+; │                                                                            │
+; └────────────────────────────────────────────────────────────────────────────┘
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Profile Information                                                        │
+; └────────────────────────────────────────────────────────────────────────────┘
+    name = Drupal Remix
+    description = The <a href="http://burtronix.co.za" title="Burtronix Drupal Website Development">Burtronix</a> Drupal 7 Remix is a Drupal installation profile that installs a new Drupal website with many useful modules, configuring several of them in the process.
+    version = VERSION
+    core = 7.x
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Core Modules                                                               │
+; └────────────────────────────────────────────────────────────────────────────┘
+    dependencies[] = block
+    dependencies[] = contextual
+    dependencies[] = color
+    dependencies[] = dblog
+    dependencies[] = field_ui
+    dependencies[] = field
+    dependencies[] = help
+    dependencies[] = image
+    dependencies[] = list
+    dependencies[] = menu
+    dependencies[] = number
+    dependencies[] = options
+    dependencies[] = path
+    dependencies[] = php
+    dependencies[] = rdf
+    dependencies[] = statistics
+    dependencies[] = syslog
+    dependencies[] = trigger
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Contrib Modules                                                            │
+; └────────────────────────────────────────────────────────────────────────────┘
+    dependencies[] = actions_permissions
+    dependencies[] = admin_menu
+    dependencies[] = admin_views
+    dependencies[] = auto_entitylabel
+    dependencies[] = better_formats
+    dependencies[] = bulk_export
+    dependencies[] = ccl
+    dependencies[] = ccl_actions
+    dependencies[] = ccl_blocks
+    dependencies[] = ccl_local_actions
+    dependencies[] = ccl_views
+    dependencies[] = chrome_frame
+    dependencies[] = computed_field
+    dependencies[] = context_admin
+    dependencies[] = context_admin_vbo
+    dependencies[] = ctools
+    dependencies[] = ctools_access_ruleset
+    dependencies[] = ctools_custom_content
+    dependencies[] = custom_formatters
+    dependencies[] = date
+    dependencies[] = date_api
+    dependencies[] = date_popup
+    dependencies[] = date_views
+    dependencies[] = devel
+    dependencies[] = diff
+    dependencies[] = ds
+    dependencies[] = ds_extras
+    dependencies[] = ds_format
+    dependencies[] = ds_forms
+    dependencies[] = ds_search
+    dependencies[] = ds_ui
+    dependencies[] = email
+    dependencies[] = entity
+    dependencies[] = entity_token
+    dependencies[] = entitycache
+    dependencies[] = entityreference
+    dependencies[] = extlink
+    dependencies[] = field_collection
+    dependencies[] = field_group
+    dependencies[] = filefield_paths
+    dependencies[] = fontyourface
+    dependencies[] = fontyourface_ui
+    dependencies[] = globalredirect
+    dependencies[] = googleanalytics
+    dependencies[] = google_fonts_api
+    dependencies[] = insert
+    dependencies[] = jquery_update
+    dependencies[] = libraries
+    dependencies[] = link
+    dependencies[] = login_security
+    dependencies[] = logintoboggan
+    dependencies[] = menu_admin_per_menu
+    dependencies[] = menu_attributes
+    dependencies[] = menu_block
+    dependencies[] = metatag
+    dependencies[] = module_filter
+    dependencies[] = options_element
+    dependencies[] = page_manager
+    dependencies[] = pagenotfound_reports
+    dependencies[] = panels
+    dependencies[] = panels_breadcrumbs
+    dependencies[] = panels_ipe
+    dependencies[] = panels_mini
+    dependencies[] = panels_node
+    dependencies[] = password_policy
+    dependencies[] = pathauto
+    dependencies[] = porterstemmer
+    dependencies[] = redirect
+    dependencies[] = schemaorg
+    dependencies[] = schemaorg_ui
+    dependencies[] = simplified_menu_admin
+    dependencies[] = styleguide
+    dependencies[] = stylizer
+    dependencies[] = token
+    dependencies[] = token_formatters
+    dependencies[] = token_tweaks
+    dependencies[] = transliteration
+    dependencies[] = views
+    dependencies[] = views_bulk_operations
+    dependencies[] = views_content
+    dependencies[] = views_rss
+    dependencies[] = views_rss_core
+    dependencies[] = views_slideshow
+    dependencies[] = views_slideshow_cycle
+    dependencies[] = views_ui
+    dependencies[] = webform
+    dependencies[] = xmlsitemap
+    dependencies[] = xmlsitemap_custom
+    dependencies[] = xmlsitemap_menu
+    dependencies[] = xmlsitemap_node
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Profile Files                                                              │
+; └────────────────────────────────────────────────────────────────────────────┘
+    files[] = remix.profile

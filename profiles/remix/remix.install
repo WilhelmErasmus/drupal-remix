@@ -1,0 +1,608 @@
+<?php
+//┌────────────────────────────────────────────────────────────────────────────┐
+//│       ______                                                               │
+//│      //   ) )   Burtronix.co.za Drupal 7 Remix Profile                     │
+//│     //___/ /            __    __  ___  __      ___       __     ( )        │
+//│    / __  (   //   / / //  ) )  / /   //  ) ) //   ) ) //   ) ) / / \\ / /  │
+//│   //    ) ) //   / / //       / /   //      //   / / //   / / / /   \/ /   │
+//│  //____/ / ((___( ( //       / /   //      ((___/ / //   / / / /    / /\   │
+//│                                                                            │
+//└────────────────────────────────────────────────────────────────────────────┘
+
+function remix_install() {
+  $variables       = remix_get_initial_variables();
+  $setup_functions = remix_get_setup_functions();
+
+  foreach($setup_functions as $setup_function) {
+    $variables = call_user_func('remix_setup_' . $setup_function, $variables);
+  }
+}
+
+function remix_get_initial_variables() {
+  return array(
+    'themes' => array(
+      'default' => 'zen_slate',
+      'admin'   => 'seven',
+    ),
+  );
+}
+
+function remix_get_setup_functions() {
+  return array(
+    'users_and_roles',
+    'filter_formats',
+    'content_structure',
+    'pathauto',
+    'token_tweaks',
+    'user_settings',
+    'default_blocks',
+    'admin_menu',
+    'password_policy',
+    'login_security',
+    'menu_items',
+    'date',
+    'themes',
+    'devel',
+    'module_filter',
+    'module_update',
+    'xml_sitemap',
+    'recommendations_page',
+    'node_access_rebuild',
+    'remove_status_messages',
+  );
+}
+
+//┌────────────────────────────────────────────────────────────────────────────┐
+//│ Setup Functions                                                            │
+//└────────────────────────────────────────────────────────────────────────────┘
+
+function remix_setup_users_and_roles($variables) {
+
+  // Create the default administrator role, with all available permissions.
+  $variables['roles']['administrator'] = new stdClass();
+  $variables['roles']['administrator']->name = 'administrator';
+  $variables['roles']['administrator']->weight = 2;
+  user_role_save($variables['roles']['administrator']);
+  user_role_grant_permissions($variables['roles']['administrator']->rid, array_keys(module_invoke_all('permission')));
+
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $variables['roles']['administrator']->rid);
+
+  // Create a default webmaster role.
+  $variables['roles']['webmaster'] = new stdClass();
+  $variables['roles']['webmaster']->name = 'webmaster';
+  $variables['roles']['webmaster']->weight = 2;
+  user_role_save($variables['roles']['webmaster']);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $variables['roles']['administrator']->rid))
+    ->execute();
+
+  // Create Webmaster user as user 2 with webmaster role
+  $fields = array(
+    'name'   => 'Webmaster',
+    'mail'   => 'webmaster@localhost.com',
+    'pass'   => user_password(8),
+    'status' => 1,
+    'init'   => 'webmaster@localhost.com',
+    'roles'  => array(
+      DRUPAL_AUTHENTICATED_RID              => 'authenticated user',
+      $variables['roles']['webmaster']->rid => $variables['roles']['webmaster']->name,
+    ),
+  );
+  $variables['users']['webmaster'] = user_save('', $fields);
+
+  // Make webmaster's password the same as Administrator's
+  $pass = db_query("SELECT pass FROM {users} WHERE uid = :uid", array(':uid' => 1))->fetchField();
+  $num_updated = db_update('users')->condition('uid', 2)->fields(array('pass' => $pass))->execute();
+
+  return $variables;
+}
+
+function remix_setup_filter_formats($variables) {
+
+  // Filtered HTML
+  $variables['filter_formats']['filtered_html'] = array(
+    'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
+    'weight' => 0,
+    'filters' => array(
+      // URL filter:
+      'filter_url'           => array('weight' =>  0, 'status' => 1),
+      // HTML filter:
+      'filter_html'          => array('weight' =>  1, 'status' => 1, 'settings' => array('allowed_html' => '<a> <em> <strong> <pre> <ul> <ol> <li>', 'filter_html_nofollow' => 1)),
+      // Line break filter:
+      'filter_autop'         => array('weight' =>  2, 'status' => 1),
+      // HTML corrector filter:
+      'filter_htmlcorrector' => array('weight' => 10, 'status' => 1),
+    ),
+  );
+  $variables['filter_formats']['filtered_html'] = (object) $variables['filter_formats']['filtered_html'];
+  filter_format_save($variables['filter_formats']['filtered_html']);
+
+  $permission = filter_permission_name($variables['filter_formats']['filtered_html']);
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID,                      array('access content', $permission));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID,                  array('access content', $permission));
+  user_role_grant_permissions($variables['roles']['administrator']->rid, array('access content', $permission));
+  user_role_grant_permissions($variables['roles']['webmaster']->rid,     array('access content', $permission));
+
+  // Full HTML
+  $variables['filter_formats']['full_html'] = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter:
+      'filter_url'           => array('weight' =>  0, 'status' => 1),
+      // HTML corrector filter:
+      'filter_htmlcorrector' => array('weight' => 10, 'status' => 1),
+    ),
+  );
+  $variables['filter_formats']['full_html'] = (object) $variables['filter_formats']['full_html'];
+  filter_format_save($variables['filter_formats']['full_html']);
+
+  $permission = filter_permission_name($variables['filter_formats']['full_html']);
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID,                      array('access content', $permission));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID,                  array('access content', $permission));
+  user_role_grant_permissions($variables['roles']['administrator']->rid, array('access content', $permission));
+  user_role_grant_permissions($variables['roles']['webmaster']->rid,     array('access content', $permission));
+
+  return $variables;
+}
+
+function remix_setup_content_structure($variables) {
+
+  // Insert default page node type into the database.
+  $type = node_type_set_defaults(array('type' => 'page', 'name' => 'Page', 'base' => 'node_content', 'description' => "Use <em>pages</em> for your static content, such as an 'About us' page.", 'custom' => 1, 'modified' => 1, 'locked' => 0, 'comment' => 0));
+  node_type_save($type);
+
+  // Create a plain body field (not with summary).
+  field_create_field(array('field_name' => 'plain_body', 'type' => 'text_long', 'translatable' => TRUE));
+
+  // Add the plain_body field to page and webform content types.
+  $instances['page_plain_body'] = array(
+    'field_name' => 'plain_body',
+    'entity_type' => 'node',
+    'bundle' => 'page',
+    'type' => 'text_long',
+    'label' => t('Body'),
+    'widget' => array('settings' => array('rows' => '8'), 'type' => 'text_textarea', 'weight' => 0),
+    'display' => array('default' => array('label' => 'hidden', 'settings' => array(), 'type' => 'text_default', 'weight' => 0), 'teaser' => array('label' => 'above', 'settings' => array(), 'type' => 'hidden', 'weight' => 0)),
+    'required' => 0,
+    'settings' => array('text_processing' => '1', 'user_register_form' => FALSE, 'rows' => '8'),
+  );
+  $instances['webform_plain_body'] = array(
+    'field_name' => 'plain_body',
+    'entity_type' => 'node',
+    'bundle' => 'webform',
+    'type' => 'text_long',
+    'label' => t('Body'),
+    'widget' => array('settings' => array('rows' => '8'), 'type' => 'text_textarea', 'weight' => 0),
+    'display' => array('default' => array('label' => 'hidden', 'settings' => array(), 'type' => 'text_default', 'weight' => 0), 'teaser' => array('label' => 'above', 'settings' => array(), 'type' => 'hidden', 'weight' => 0)),
+    'required' => 0,
+    'settings' => array('text_processing' => '1', 'user_register_form' => FALSE, 'rows' => '8'),
+  );
+  foreach($instances as $instance) {
+    field_create_instance($instance);
+  }
+
+  // Remove body field from webform.
+  $instance = field_read_instance('node', 'body', 'webform');
+  field_delete_instance($instance);
+
+  // Default page to not be promoted.
+  variable_set('node_options_page', array('status'));
+
+  // Don't display date and author information for page and webform nodes by default.
+  variable_set('node_submitted_page', FALSE);
+  variable_set('node_submitted_webform', FALSE);
+
+  // Disable Comments for page and webform nodes by default.
+  variable_set('comment_page', FALSE);
+  variable_set('comment_webform', FALSE);
+
+  // Grant Administrator and Webmaster permissions for Page type
+  $permissions = array(
+    'create page content',
+    'edit own page content',
+    'edit any page content',
+    'delete own page content',
+    'delete any page content',
+  );
+  foreach($permissions as $permission) {
+    user_role_grant_permissions($variables['roles']['administrator']->rid, array('access content', $permission));
+    user_role_grant_permissions($variables['roles']['webmaster']->rid,     array('access content', $permission));
+  }
+
+  return $variables;
+}
+
+function remix_setup_pathauto($variables) {
+
+  variable_set('pathauto_node_pattern',         '[node:content-type]/[node:title]');
+  variable_set('pathauto_node_page_pattern',    '[node:title]');
+  variable_set('pathauto_node_webform_pattern', '[node:title]');
+  variable_set('pathauto_transliterate', 1);
+  variable_set('pathauto_ignore_words', '');
+
+  return $variables;
+}
+
+function remix_setup_token_tweaks($variables) {
+  variable_set('token_tree_recursion_limit', 3);
+  return $variables;
+}
+
+function remix_setup_user_settings($variables) {
+  // Only administrators can create user accounts.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+  return $variables;
+}
+
+function remix_setup_default_blocks($variables) {
+
+  // Enable some standard blocks.
+  $values = array(
+    array('module' => 'system', 'delta' => 'main',      'theme' => $variables['themes']['default'], 'status' => 1, 'weight' => 0, 'region' => 'content', 'pages' => '', 'cache' => -1, 'title' => ''),
+    array('module' => 'system', 'delta' => 'main-menu', 'theme' => $variables['themes']['default'], 'status' => 1, 'weight' => 0, 'region' => 'header',  'pages' => '', 'cache' => -1, 'title' => '<none>'),
+    array('module' => 'system', 'delta' => 'help',      'theme' => $variables['themes']['default'], 'status' => 1, 'weight' => 0, 'region' => 'help',    'pages' => '', 'cache' => -1, 'title' => ''),
+    array('module' => 'system', 'delta' => 'main',      'theme' => $variables['themes']['admin'],   'status' => 1, 'weight' => 0, 'region' => 'content', 'pages' => '', 'cache' => -1, 'title' => ''),
+    array('module' => 'system', 'delta' => 'help',      'theme' => $variables['themes']['admin'],   'status' => 1, 'weight' => 0, 'region' => 'help',    'pages' => '', 'cache' => -1, 'title' => ''),
+  );
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+
+  return $variables;
+}
+
+function remix_setup_admin_menu($variables) {
+  variable_set('admin_menu_cache_client',  0);
+  variable_set('admin_menu_tweak_modules', 1);
+  return $variables;
+}
+
+function remix_setup_password_policy($variables) {
+
+  // Insert the Password Policy
+  db_insert('password_policy')
+    ->fields(array(
+      'pid'        => 1,
+      'name'       => 'Basic Sane',
+      'enabled'    => 1,
+      'policy'     => 'a:3:{s:8:"username";s:1:"1";s:6:"length";s:1:"8";s:10:"complexity";s:1:"3";}',
+      'created'    => time(),
+    ))
+    ->execute();
+
+  // Enable it for all roles
+  db_insert('password_policy_role')->fields(array('pid' => 1, 'rid' => 2))->execute();
+  db_insert('password_policy_role')->fields(array('pid' => 1, 'rid' => 3))->execute();
+  db_insert('password_policy_role')->fields(array('pid' => 1, 'rid' => 4))->execute();
+
+  return $variables;
+}
+
+function remix_setup_login_security($variables) {
+
+  // Login delay base time
+  variable_set('login_security_delay_base_time', '1');
+
+  // Increase delay for each attempt?
+  variable_set('login_security_delay_increase', '1');
+
+  // Maximum number of login failures before detecting an ongoing attack
+  variable_set('login_security_activity_threshold', '14');
+
+  // Maximum number of login failures before soft blocking a host
+  variable_set('login_security_host_wrong_count', '15');
+
+  // Display last access timestamp
+  variable_set('login_security_last_access_timestamp', '1');
+
+  // Display last login timestamp
+  variable_set('login_security_last_login_timestamp', 1);
+
+  // Who should get an email message when an ongoing attack is detected
+  variable_set('login_security_login_activity_email_user', 'Administrator');
+
+  // Track time (hours)
+  variable_set('login_security_track_time', '1');
+
+  return $variables;
+}
+
+function remix_setup_menu_items($variables) {
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+
+  return $variables;
+}
+
+function remix_setup_date($variables) {
+
+  // Date & Region
+  variable_set('site_default_country', 'ZA');
+  variable_set('date_first_day', 1);
+  variable_set('date_default_timezone', 'Africa/Johannesburg');
+  variable_set('date_format_long', 'l, F j, Y - H:i');
+  variable_set('date_format_medium', 'D, Y-m-d H:i');
+  variable_set('date_format_short', 'Y-m-d H:i');
+
+  return $variables;
+}
+
+function remix_setup_themes($variables) {
+
+  theme_enable(array('zen', $variables['themes']['default'], $variables['themes']['admin']));
+  variable_set('theme_default',    $variables['themes']['default']);
+  variable_set('admin_theme',      $variables['themes']['admin']);
+  variable_set('node_admin_theme', '0');
+
+  return $variables;
+}
+
+function remix_setup_devel($variables) {
+
+  // Display machine names of permissions and modules on mouse hover.
+  variable_set('devel_raw_names', 1);
+
+  // Add krumo backtrace to errors for admin.
+  variable_set('devel_error_handlers', array(1 => '1', 2 => '2'));
+
+  return $variables;
+}
+
+function remix_setup_module_filter($variables) {
+  // Dynamic positioning:
+  variable_set('module_filter_dynamic_save_position', 1);
+  return $variables;
+}
+
+function remix_setup_module_update($variables) {
+
+  // Check for updates of disabled modules and themes
+  variable_set('update_check_disabled', 1);
+
+  // Check for updates weekly
+  variable_set('update_check_frequency', 7);
+
+  return $variables;
+}
+
+function remix_setup_xml_sitemap($variables) {
+
+  // adds main menu pages to the sitemap by default with priority 0.6.
+  variable_set('xmlsitemap_settings_menu_link_main-menu', array('status' => '1', 'priority' => '0.6'));
+
+  return $variables;
+}
+
+function remix_setup_chrome_frame() {
+
+  // IE6 only
+  variable_set('chrome_frame_prompt', 'ie6orless');
+
+  return $variables;
+}
+
+function remix_setup_recommendations_page($variables) {
+
+  $recommendations = array(
+
+    array(
+      'title'   => 'Primary Recommendation Modules',
+      'modules' => array(
+        array('title' => 'Examples for Developers',                      'name' => 'examples',                 'description' => 'Contains many modules which illustrate best practices for implementing various Drupal APIs. (<a href="http://drupal.org/project/modules?filters=tid%3A19440%20bs_project_sandbox%3A0&amp;solrsort=sis_project_release_usage%20desc" rel="nofollow">Non-core examples</a>).'),
+        array('title' => 'CKEditor - WYSIWYG HTML editor',               'name' => 'ckeditor',                 'description' => 'Replace textarea fields with the WYSIWYG CKEditor.'),
+        array('title' => 'Backup and Migrate',                           'name' => 'backup_migrate',           'description' => 'Simplifies the task of backing up and restoring your Drupal MySQL database.'),
+        array('title' => 'Backup and Migrate Files',                     'name' => 'backup_migrate_files',     'description' => 'Adds files directory backup functionality to Backup and Migrate.'),
+        array('title' => 'Colorbox',                                     'name' => 'colorbox',                 'description' => 'A light-weight, customizable lightbox plugin.'),
+        array('title' => 'Context',                                      'name' => 'context',                  'description' => 'Allows you to manage contextual conditions and reactions for different portions of your site.'),
+        array('title' => 'Feeds',                                        'name' => 'feeds',                    'description' => 'Import or aggregate data as nodes, users, taxonomy terms or simple database records.'),
+        array('title' => 'Migrate',                                      'name' => 'migrate',                  'description' => 'Provides a flexible framework for migrating content into Drupal from other sources.'),
+        array('title' => 'Organic Groups',                               'name' => 'og',                       'description' => 'User groups with access control.'),
+        array('title' => 'Panels Everywhere',                            'name' => 'panels_everywhere',        'description' => 'An advanced method to completely do away with Drupal\'s blocks system and instead use the Panels Layout system.'),
+        array('title' => 'Security Review',                              'name' => 'security_review',          'description' => 'Automates checks for many of the easy-to-make mistakes that render your site insecure.'),
+        array('title' => 'Service Links',                                'name' => 'service_links',            'description' => 'Module engine for add various service links about social sharing networks to nodes.'),
+        array('title' => 'Simplenews',                                   'name' => 'simplenews',               'description' => 'Publishes and sends newsletters to lists of subscribers.'),
+        array('title' => 'Submitted By',                                 'name' => 'submitted_by',             'description' => 'Lets you control the format of the "Submitted by" information with token support.'),
+      ),
+    ),
+
+    array(
+      'title'   => 'Notable Modules',
+      'modules' => array(
+        array('title' => 'Address Field',                                'name' => 'addressfield',             'description' => 'Field module to hold postal addresses, implementing a subset of the fields defined in the xNAL standard.'),
+        array('title' => 'Advanced help',                                'name' => 'advanced_help',            'description' => 'Allows module developers to store their help outside the module system, in pure .html files.'),
+        array('title' => 'Apply for role',                               'name' => 'apply_for_role',           'description' => 'Allows users to apply for roles and allows role administrators to approve the role applications.'),
+        array('title' => 'Better Exposed Filters',                       'name' => 'better_exposed_filters',   'description' => 'Replaces the Views\' default single- or multi-select boxes with radio buttons or checkboxes.'),
+        array('title' => 'Boost',                                        'name' => 'boost',                    'description' => 'Provides static page caching for anonymous traffic.'),
+        array('title' => 'Bundle copy',                                  'name' => 'bundle_copy',              'description' => 'A replacement for the Content copy module which lives in the CCK project for Drupal 6.'),
+        array('title' => 'Cache Warmer',                                 'name' => 'cache_warmer',             'description' => 'A drush command that hits a set of URIs.'),
+        array('title' => 'CCK Blocks',                                   'name' => 'cck_blocks',               'description' => 'Allows you to create blocks from fields of the currently displayed node.'),
+        array('title' => 'Computed Field',                               'name' => 'computed_field',           'description' => 'Lets you add a custom "computed fields" to your content types.'),
+        array('title' => 'Computed Field Tools',                         'name' => 'computed_field_tools',     'description' => 'Offers a way to re-compute the computed fields of existing entities/nodes.'),
+        array('title' => 'Conditional Fields',                           'name' => 'conditional_fields',       'description' => 'Define dependencies between fields based on their states and values.'),
+        array('title' => 'Content Access',                               'name' => 'content_access',           'description' => 'Allows you to manage permissions for content types by role and author.'),
+        array('title' => 'Countries',                                    'name' => 'countries',                'description' => 'Provides many country related tasks. (fields, icons and more).'),
+        array('title' => 'CSS Embedded Images',                          'name' => 'css_emimage',              'description' => 'The data URI scheme is a URI scheme that provides a way to include data in line in web pages as if they were external.'),
+        array('title' => 'Disable Messages',                             'name' => 'disable_messages',         'description' => 'Gives a site owner options to disable specific messages shown to end users.'),
+        array('title' => 'DraggableViews',                               'name' => 'draggableviews',           'description' => 'Makes rows of a view "draggable" which means that they can be rearranged by Drag\'n\'Drop.'),
+        array('title' => 'EVA: Entity Views Attachment',                 'name' => 'eva',                      'description' => 'Provides a Views display plugin that allows the output of a View to be attached to the content of any Drupal entity.'),
+        array('title' => 'Favicon',                                      'name' => 'favicon',                  'description' => 'Make requests to http://example.com/favicon.ico forward to the actual site\'s true favicon.'),
+        array('title' => 'Features',                                     'name' => 'features',                 'description' => 'Enables the capture and management of features in Drupal.'),
+        array('title' => 'Field Permissions',                            'name' => 'field_permissions',        'description' => 'Allows site administrators to set field-level permissions to edit, view and create fields on any entity.'),
+        array('title' => 'File entity (fieldable files)',                'name' => 'file_entity',              'description' => 'Extends the core file entity, allowing files to be fieldable.'),
+        array('title' => 'Fivestar',                                     'name' => 'fivestar',                 'description' => 'Adds a clean, attractive voting widget to any entity.'),
+        array('title' => 'Flag',                                         'name' => 'flag',                     'description' => 'Can provide any number of flags for nodes, comments, users, and any other type of entity.'),
+        array('title' => 'Flatcomments',                                 'name' => 'flatcomments',             'description' => 'Force comments to always be replies to the node regardless of the reply link used.'),
+        array('title' => 'Flood control',                                'name' => 'flood_control',            'description' => 'Add an administration interface for hidden flood control variables in Drupal 7.'),
+        array('title' => 'FooTable',                                     'name' => 'footable',                 'description' => 'Provides integration for the jQuery FooTable plugin for creating responsive tables.'),
+        array('title' => 'Gallery formatter',                            'name' => 'galleryformatter',         'description' => 'Provides a CCK formatter for image fields, which will turn any image field into a jQuery Gallery.'),
+        array('title' => 'Google Analytics Reports',                     'name' => 'google_analytics_reports', 'description' => 'Provides graphical reporting of your site\'s tracking data.'),
+        array('title' => 'HTML Purifier',                                'name' => 'htmlpurifier',             'description' => 'A standards-compliant HTML filter library.'),
+        array('title' => 'IMCE',                                         'name' => 'imce',                     'description' => 'An image/file uploader and browser that supports personal directories and quota.'),
+        array('title' => 'Image Editor',                                 'name' => 'imageeditor',              'description' => 'Image editing (draw, text, crop, scale, etc.) functionality.'),
+        array('title' => 'Insert View',                                  'name' => 'insert_view',              'description' => 'A filter that allows users to embed content lists generated by the Views module into node bodies.'),
+        array('title' => 'Internal Nodes',                               'name' => 'internal_nodes',           'description' => 'Denies access to node/[nid] URLs while allowing the content to stay published and otherwise viewable.'),
+        array('title' => 'iToggle',                                      'name' => 'itoggle',                  'description' => 'Uses the iToggle jQuery plugin to create engaging and interactive widgets for fields and boolean entity properties.'),
+        array('title' => 'Job Scheduler',                                'name' => 'job_scheduler',            'description' => 'Simple API for scheduling tasks once at a predetermined time or periodically at a fixed interval.'),
+        array('title' => 'jQuery selectBox',                             'name' => 'selectbox',                'description' => 'A styleable replacement for select elements.'),
+        array('title' => 'jQuery waypoints',                             'name' => 'waypoints',                'description' => 'A small jQuery plugin that makes it easy to execute a function whenever you scroll to an element.'),
+        array('title' => 'Masquerade',                                   'name' => 'masquerade',               'description' => 'Allows a user with the right permissions to switch users.'),
+        array('title' => 'Mime Mail',                                    'name' => 'mimemail',                 'description' => 'A Mime Mail component module.'),
+        array('title' => 'Mobile Codes',                                 'name' => 'mobile_codes',             'description' => 'Create Datamatrix or QR codes via an input filter or a direct call in your template.'),
+        array('title' => 'Nodequeue',                                    'name' => 'nodequeue',                'description' => 'Allows users to collect nodes in an arbitrarily ordered list.'),
+        array('title' => 'ModuleInfo',                                   'name' => 'moduleinfo',               'description' => 'Scans your current drupal system of modules for useful information presented on the modules page.'),
+        array('title' => 'Multiselect',                                  'name' => 'multiselect',              'description' => 'Widget allows the user to select multiple items in an easy way.'),
+        array('title' => 'Override Node Options',                        'name' => 'override_node_options',    'description' => 'Allows permissions to be set to each field within the Authoring information and Publishing options field sets on the node form.'),
+        array('title' => 'Panelizer',                                    'name' => 'panelizer',                'description' => 'Allows you to attach panels to any node in the system.'),
+        array('title' => 'Parsing API',                                  'name' => 'parsing_api',              'description' => 'Text parting functions for use in other modules.'),
+        array('title' => 'Pathologic',                                   'name' => 'pathologic',               'description' => 'An input filter which can correct paths in links and images in your Drupal content.'),
+        array('title' => 'Performance Logging and Monitoring',           'name' => 'performance',              'description' => 'Provides performance statistics logging for a site.'),
+        array('title' => 'Plupload integration',                         'name' => 'plupload',                 'description' => 'Provides integration between for the Plupload widget to upload multiple files and Drupal.'),
+        array('title' => 'Prepopulate',                                  'name' => 'prepopulate',              'description' => 'Allows fields in most forms to be pre-populated from the $_REQUEST variable.'),
+        array('title' => 'Production check & Production monitor',        'name' => 'prod_check',               'description' => 'Double check a lot of settings, like the error logging, site e-mail, disabling the Devel module and so on.'),
+        array('title' => 'Profile 2',                                    'name' => 'profile2',                 'description' => 'Provides a new, fieldable profile entity.'),
+        array('title' => 'Profile2 Registration Path',                   'name' => 'profile2_regpath',         'description' => 'Enables administrators to set unique registration paths per Profile2 profile type.'),
+        array('title' => 'Quick Tabs',                                   'name' => 'quicktabs',                'description' => 'Allows you to create blocks of tabbed content, specifically views, blocks, nodes* and other quicktabs*.'),
+        array('title' => 'Rules',                                        'name' => 'rules',                    'description' => 'Allows site administrators to define conditionally executed actions based on occurring events.'),
+        array('title' => 'Rules Bonus Pack',                             'name' => 'rb',                       'description' => 'A greenhouse for Rules functionality – triggers, actions and conditions that could be included in the Rules module, but probably should be tested out and voted on first.'),
+        array('title' => 'Role Delegation',                              'name' => 'role_delegation',          'description' => 'Allows site administrators to grant some roles the authority to assign selected roles to users, without them needing the administer permissions permission.'),
+        array('title' => 'Save Draft',                                   'name' => 'save_draft',               'description' => 'Adds a \'Save as Draft\' Button to the node_form for content types, allowing the user to click the \'Save as Draft\' button to save the node as a draft.'),
+        array('title' => 'Search 404',                                   'name' => 'search404',                'description' => 'Performs a search on the keywords in the URL for 404 page not found pages.'),
+        array('title' => 'Search configuration',                         'name' => 'search_config',            'description' => 'Alter the appearance of the core node search form and more.'),
+        array('title' => 'Search Restrict',                              'name' => 'search_restrict',          'description' => 'Re-write the search query, so that content is indexed and only available as search results to users in role(s) that have permissions to view it.'),
+        array('title' => 'Select (or other)',                            'name' => 'select_or_other',          'description' => 'Provides a select box form element with additional option \'Other\' to give a textfield.'),
+        array('title' => 'Services',                                     'name' => 'services',                 'description' => 'A standardized solution of integrating external applications with Drupal.'),
+        array('title' => 'Session Limit',                                'name' => 'session_limit',            'description' => 'Allows administrators to limit the number of simultaneous sessions per user.'),
+        array('title' => 'SEO Checklist',                                'name' => 'seo_checklist',            'description' => 'Uses Drupal SEO best practices to check your website for proper search engine optimization.'),
+        array('title' => 'SEO Compliance Checker',                       'name' => 'seo_checker',              'description' => 'Checks node content on search engine optimization upon its creation or modification.'),
+        array('title' => 'Scheduler',                                    'name' => 'scheduler',                'description' => 'Allows nodes to be published and unpublished on specified dates.'),
+        array('title' => 'Simplenews Scheduler',                         'name' => 'simplenews_scheduler',     'description' => 'Sends a newsletter as a re-occurring item based on a schedule.'),
+        array('title' => 'String Overrides',                             'name' => 'stringoverrides',          'description' => 'Provides a quick and easy way to replace any text on the site.'),
+        array('title' => 'Strongarm',                                    'name' => 'strongarm',                'description' => 'Gives site builders a way to override the default variable values that Drupal core and contributed modules ship with.'),
+        array('title' => 'ThemeKey',                                     'name' => 'themekey',                 'description' => 'Allows you to define simple or sophisticated theme-switching rules.'),
+        array('title' => 'Taxonomy Manager',                             'name' => 'taxonomy_manager',         'description' => 'Provides a powerful interface for managing taxonomies.'),
+        array('title' => 'Total Control Admin Dashboard',                'name' => 'total_control',            'description' => 'Creates a default panel page with useful administration tools.'),
+        array('title' => 'Weight',                                       'name' => 'weight',                   'description' => 'Adds a weight option to enabled node types.'),
+        array('title' => 'Workflow',                                     'name' => 'workflow',                 'description' => 'Allows the creation and assignment of arbitrary workflows to content.'),
+        array('title' => 'View Mode Page',                               'name' => 'view_mode_page',           'description' => 'Create separate pages for different view modes for a given content type.'),
+        array('title' => 'View reference',                               'name' => 'viewreference',            'description' => 'Defines a field type View reference which creates a relationship to a Views display and allows the view to be displayed as the content of the field.'),
+        array('title' => 'Views Calc',                                   'name' => 'views_calc',               'description' => 'Adds simple calculations to a views table.'),
+        array('title' => 'Views Data Export',                            'name' => 'views_data_export',        'description' => 'Provides a way to export large amounts of data from views (CSV, XLS, DOC, TXT, XML).'),
+        array('title' => 'Views Hacks',                                  'name' => 'views_hacks',              'description' => 'A set of small Views add-ons that provide useful functionalities.'),
+        array('title' => 'Voting API',                                   'name' => 'votingapi',                'description' => 'Standardized API and schema for storing, retrieving, and tabulating votes.'),
+      ),
+    ),
+
+    array(
+      'title'   => 'Multilingual Modules',
+      'modules' => array(
+        array('title' => 'Entity Translation',                           'name' => 'entity_translation',       'description' => 'Allows (fieldable) entities to be translated into different languages.'),
+        array('title' => 'Internationalization',                         'name' => 'i18n',                     'description' => 'A collection of modules to extend Drupal core multilingual capabilities.'),
+        array('title' => 'Localization client',                          'name' => 'l10n_client',              'description' => 'Helps you fix translations on your site as you see the issues.'),
+        array('title' => 'Localization update',                          'name' => 'l10n_update',              'description' => 'Automatically download and update your translations fetching them from localize.drupal.org.'),
+        array('title' => 'Language Switcher',                            'name' => 'language_switcher',        'description' => 'An enhancement for core language switcher block.'),
+        array('title' => 'Multi-Language Link and Redirect (MultiLink)', 'name' => 'multilink',                'description' => 'Generates links pointing to content in user\'s preferred language... and more.'),
+        array('title' => 'Title',                                        'name' => 'title',                    'description' => 'Convert node titles to the Field API in order to make nodes fully translatable.'),
+        array('title' => 'Translation helpers',                          'name' => 'translation_helpers',      'description' => 'Enables other modules to respond to changes in the "source translation" of a set of translated content.'),
+        array('title' => 'Translation Overview',                         'name' => 'translation_overview',     'description' => 'Provides a table listing the site\'s nodes and showing what\'s been translated.'),
+        array('title' => 'Webform Localization',                         'name' => 'webform_localization',     'description' => 'Provides multilingual features to the Webform Module. '),
+
+      ),
+    ),
+
+    array(
+      'title'   => 'Mapping',
+      'modules' => array(
+        array('title' => 'Geofield',                                     'name' => 'geofield',                 'description' => 'For storing geographic data fields.'),
+        array('title' => 'geoPHP',                                       'name' => 'geophp',                   'description' => 'Provides integration with the geoPHP library.'),
+        array('title' => 'Geocoder',                                     'name' => 'geocoder',                 'description' => 'Will geocode just about anything you throw at it.'),
+        array('title' => 'OpenLayers Filters',                           'name' => 'openlayers_filters',       'description' => 'Provides an input filter to create inline OpenLayers maps.'),
+        array('title' => 'Leaflet',                                      'name' => 'leaflet',                  'description' => 'Integration with the Leaflet JavaScript mapping library.'),
+      ),
+    ),
+
+    array(
+      'title'   => 'Keep an Eye on Development',
+      'modules' => array(
+        array('title' => 'AES encryption',                               'name' => 'aes',                      'description' => 'Encryption API. Check again once we have a 7.x-1.5 release.'),
+        array('title' => 'Active Tags',                                  'name' => 'active_tags',              'description' => 'Adds a new JQuery taxonomy widget option to free tagging taxonomies.'),
+        array('title' => 'Boost',                                        'name' => 'boost',                    'description' => 'Provides static page caching. Last seen 7.x-1.0-beta2. Test on Hetzner.'),
+        array('title' => 'Chosen',                                       'name' => 'chosen',                   'description' => 'Uses the Chosen jQuery plugin to make select elements more user-friendly. Last seen 7.x-1.0. Maybe if it advances a version.'),
+        array('title' => 'Configuration Management',                     'name' => 'configuration',            'description' => 'Enables the ability to keep track of specific configurations and move these configurations between different environments Last seen 7.x-2.x-dev (2012-Oct-02). See how it matures, it is a backport of CMI in D8'),
+        array('title' => 'File Aliases',                                 'name' => 'file_aliases',             'description' => 'Allows you to use token customizable aliases for your uploaded files. Last seen 7.x-1.0-beta1. Remains a bit unstable.'),
+        array('title' => 'Media Gallery',                                'name' => 'media_gallery',            'description' => 'Uses the Media module to provide a rich media gallery. Last seen 7.x-1.0-beta8. May mature as it is an Acquia module.'),
+        array('title' => 'Search Krumo',                                 'name' => 'search_krumo',             'description' => 'Search krumo extends the devel module. Last seen 7.x-1.2. Current version displays a Krumo for theme.inc line 1160.'),
+        array('title' => 'Ultimate Cron',                                'name' => 'ultimate_cron',            'description' => 'Runs cron jobs individually in parallel. Last seen 7.x-1.6. Test it some time.'),
+      ),
+    ),
+
+  );
+
+
+  $nl = "\n";
+  $body_text = '<div class="recommended-modules">';
+
+  foreach($recommendations as $heading) {
+
+    $body_text .= '<h2>' . $heading['title'] . '</h2>' . $nl;
+    $body_text .= '<ul>' . $nl;
+    foreach($heading['modules'] as $module) {
+
+      $body_text .= '  <li>' . $nl;
+      $body_text .= '    <h3><a href="https://drupal.org/project/' . $module['name'] . '">' . $module['title'] . '</a> ' . $module['name'] . '</h3>' . $nl;
+      $body_text .= '    <p>' . $module['description'] . '</p>' . $nl;
+      $body_text .= '  </li>' . $nl;
+
+    }
+    $body_text .= '</ul>' . $nl;
+
+  }
+
+  $body_text .= '</div>';
+
+  $node = new stdClass();
+  $node->type = 'page';
+  node_object_prepare($node);
+
+  $node->title    = 'Module Recommendations';
+  $node->language = LANGUAGE_NONE;
+
+  $node->plain_body[$node->language][0]['value']   = $body_text;
+  $node->plain_body[$node->language][0]['format']  = 'php_code';
+
+  node_save($node);
+
+  variable_set('site_frontpage', 'node/1');
+
+  return $variables;
+}
+
+function remix_setup_node_access_rebuild($variables) {
+  node_access_rebuild();
+  return $variables;
+}
+
+function remix_setup_remove_status_messages($variables) {
+
+  // Remove all status messages
+  unset($_SESSION['messages']['status']);
+
+  return $variables;
+}
