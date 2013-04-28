@@ -30,16 +30,17 @@ Instructions
 - Clone Drupal Remix:
 
     git clone git://github.com/RiaanBurger/drupal-remix.git
-    
+
 - You just want the profiles folder:
 
     mv drupal-remix/profiles ./
+
     rm -Rf drupal-remix/
-    
+
 - Now run drush make ont he profile:
 
     drush make profiles/remix/remix.make
-    
+
 - Access your website in the browser to complete your Drupal Remix installation.
 
 - Update the website, run:
