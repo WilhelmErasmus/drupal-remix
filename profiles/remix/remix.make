@@ -83,7 +83,7 @@
 		projects[zen_slate][subdir]         = "custom"
 		projects[zen_slate][type]           = "theme"
     projects[zen_slate][download][type] = "git"
-    projects[zen_slate][download][url]  = "nightwatch@git.drupal.org:sandbox/nightwatch/1981700.git"
+    projects[zen_slate][download][url]  = "http://git.drupal.org/sandbox/nightwatch/1981700.git"
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Libraries - JQuery Cycle Plugin                                            │
 ; └────────────────────────────────────────────────────────────────────────────┘
