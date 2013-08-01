@@ -43,6 +43,7 @@
     dependencies[] = admin_views
     dependencies[] = auto_entitylabel
     dependencies[] = better_formats
+    dependencies[] = boxes
     dependencies[] = bulk_export
     dependencies[] = ccl
     dependencies[] = ccl_actions
@@ -51,8 +52,11 @@
     dependencies[] = ccl_views
     dependencies[] = chrome_frame
     dependencies[] = computed_field
+    dependencies[] = context
     dependencies[] = context_admin
     dependencies[] = context_admin_vbo
+    dependencies[] = context_layouts
+    dependencies[] = context_ui
     dependencies[] = ctools
     dependencies[] = ctools_access_ruleset
     dependencies[] = ctools_custom_content
@@ -75,6 +79,7 @@
     dependencies[] = entitycache
     dependencies[] = entityreference
     dependencies[] = extlink
+    dependencies[] = features
     dependencies[] = field_collection
     dependencies[] = field_group
     dependencies[] = filefield_paths
@@ -108,6 +113,7 @@
     dependencies[] = schemaorg
     dependencies[] = schemaorg_ui
     dependencies[] = simplified_menu_admin
+    dependencies[] = strongarm
     dependencies[] = styleguide
     dependencies[] = stylizer
     dependencies[] = token

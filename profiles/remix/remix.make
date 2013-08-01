@@ -25,9 +25,11 @@
     projects[admin_menu][version]                = 3.0-rc4
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
+    projects[boxes][version]                     = 1.1
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0-beta1
+    projects[context][version]                   = 3.0-beta7
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.3
     projects[custom_formatters][version]         = 2.2
@@ -42,6 +44,7 @@
     projects[entitycache][version]               = 1.1
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
+    projects[features][version]                  = 2.0-rc1
     projects[field_collection][version]          = 1.0-beta5
     projects[field_group][version]               = 1.1
     projects[filefield_paths][version]           = 1.0-beta4
@@ -67,6 +70,7 @@
     projects[redirect][version]                  = 1.0-rc1
     projects[schemaorg][version]                 = 1.0-beta3
     projects[simplified_menu_admin][version]     = 0
+    projects[strongarm][version]                 = 2.0
     projects[styleguide][version]                = 1.1
     projects[token][version]                     = 1.5
     projects[token_formatters][version]          = 1.2
