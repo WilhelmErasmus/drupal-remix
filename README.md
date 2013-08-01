@@ -25,7 +25,7 @@ Requirements
 Instructions
 ============
 
-- Work in a folder where you want to install you Drupal Remix.
+- Work in a folder where you want to install your Drupal Remix.
 
 - Clone Drupal Remix:
 
@@ -37,16 +37,15 @@ Instructions
 
     rm -Rf drupal-remix/
 
-- Now run drush make ont he profile:
+- Now run drush make on the profile:
 
     drush make profiles/remix/remix.make
 
 - Access your website in the browser to complete your Drupal Remix installation.
 
-- Update the website, run:
-
-    drush up
-
 Customize
 =========
-You can edit the remix.profile file to change the default language from English and location from South Africa to your own preference.
+
+- You can edit the remix.profile file to change the default language from English and location from South Africa to your own preference.
+
+- If you run the bash script, makemake.sh in profiles/remix it will generate a new remix.make file for you with updated versions for the projects.
