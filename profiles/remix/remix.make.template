@@ -1,0 +1,102 @@
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │       ______                                                               │
+; │      //   ) )   Burtronix.co.za Drupal 7 Remix Profile                     │
+; │     //___/ /            __    __  ___  __      ___       __     ( )        │
+; │    / __  (   //   / / //  ) )  / /   //  ) ) //   ) ) //   ) ) / / \\ / /  │
+; │   //    ) ) //   / / //       / /   //      //   / / //   / / / /   \/ /   │
+; │  //____/ / ((___( ( //       / /   //      ((___/ / //   / / / /    / /\   │
+; │                                                                            │
+; └────────────────────────────────────────────────────────────────────────────┘
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Make Information                                                           │
+; └────────────────────────────────────────────────────────────────────────────┘
+    core                                         = 7.x
+    api                                          = 2
+    projects[drupal][version]                    =
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Configuration                                                              │
+; └────────────────────────────────────────────────────────────────────────────┘
+    defaults[projects][subdir]                   = contrib
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Modules                                                                    │
+; └────────────────────────────────────────────────────────────────────────────┘
+    projects[libraries][version]                 =
+    projects[admin_views][version]               =
+    projects[admin_menu][version]                =
+    projects[auto_entitylabel][version]          =
+    projects[better_formats][version]            =
+    projects[ccl][version]                       =
+    projects[chrome_frame][version]              =
+    projects[computed_field][version]            =
+    projects[context_admin][version]             =
+    projects[ctools][version]                    =
+    projects[custom_formatters][version]         =
+    ; Remove Custom Formatters makefile to prevent duplicate downloads - http://drupal.org/node/1721294#comment-6395368
+    projects[custom_formatters][patch][]         = http://drupal.org/files/no_makefile-1721294-1.patch
+    projects[date][version]                      =
+    projects[devel][version]                     =
+    projects[diff][version]                      =
+    projects[ds][version]                        =
+    projects[email][version]                     =
+    projects[entity][version]                    =
+    projects[entitycache][version]               =
+    projects[entityreference][version]           =
+    projects[extlink][version]                   =
+    projects[field_collection][version]          =
+    projects[field_group][version]               =
+    projects[filefield_paths][version]           =
+    projects[fontyourface][version]              =
+    projects[globalredirect][version]            =
+    projects[google_analytics][version]          =
+    projects[insert][version]                    =
+    projects[jquery_update][version]             =
+    projects[link][version]                      =
+    projects[login_security][version]            =
+    projects[logintoboggan][version]             =
+    projects[menu_admin_per_menu][version]       =
+    projects[menu_attributes][version]           =
+    projects[menu_block][version]                =
+    projects[metatag][version]                   =
+    projects[module_filter][version]             =
+    projects[pagenotfound_reports][version]      =
+    projects[panels][version]                    =
+    projects[panels_breadcrumbs][version]        =
+    projects[password_policy][version]           =
+    projects[pathauto][version]                  =
+    projects[porterstemmer][version]             =
+    projects[redirect][version]                  =
+    projects[schemaorg][version]                 =
+    projects[simplified_menu_admin][version]     =
+    projects[styleguide][version]                =
+    projects[token][version]                     =
+    projects[token_formatters][version]          =
+    projects[token_tweaks][version]              =
+    projects[transliteration][version]           =
+    projects[views][version]                     =
+    projects[views_bulk_operations][version]     =
+    projects[views_rss][version]                 =
+    projects[views_slideshow][version]           =
+    projects[webform][version]                   =
+    projects[xmlsitemap][version]                =
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Themes                                                                     │
+; └────────────────────────────────────────────────────────────────────────────┘
+    projects[zen][version]                       =
+    projects[zen_slate][subdir]                  = "custom"
+    projects[zen_slate][type]                    = "theme"
+    projects[zen_slate][download][type]          = "git"
+    projects[zen_slate][download][url]           = "http://git.drupal.org/sandbox/nightwatch/1981700.git"
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Libraries - JQuery Cycle Plugin                                            │
+; └────────────────────────────────────────────────────────────────────────────┘
+    libraries[jquery.cycle][download][type]      = "get"
+    libraries[jquery.cycle][download][url]       = "http://malsup.github.com/jquery.cycle.all.js"
+    libraries[jquery.cycle][directory_name]      = "jquery.cycle"
+    libraries[jquery.cycle][destination]         = "libraries"
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Libraries - JQuery Easing Plugin                                           │
+; └────────────────────────────────────────────────────────────────────────────┘
+    libraries[jquery.easing][download][type]     = "get"
+    libraries[jquery.easing][download][url]      = "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"
+    libraries[jquery.easing][directory_name]     = "jquery.easing"
+    libraries[jquery.easing][destination]        = "libraries"

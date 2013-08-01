@@ -94,7 +94,6 @@
     dependencies[] = menu_block
     dependencies[] = metatag
     dependencies[] = module_filter
-    dependencies[] = options_element
     dependencies[] = page_manager
     dependencies[] = pagenotfound_reports
     dependencies[] = panels
