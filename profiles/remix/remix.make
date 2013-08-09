@@ -12,7 +12,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.22
+    projects[drupal][version]                    = 7.23
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -44,7 +44,7 @@
     projects[entitycache][version]               = 1.1
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
-    projects[features][version]                  = 2.0-rc1
+    projects[features][version]                  = 2.0-rc2
     projects[field_collection][version]          = 1.0-beta5
     projects[field_group][version]               = 1.1
     projects[filefield_paths][version]           = 1.0-beta4
@@ -60,7 +60,7 @@
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.3
     projects[metatag][version]                   = 1.0-beta7
-    projects[module_filter][version]             = 1.7
+    projects[module_filter][version]             = 1.8
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.3
     projects[panels_breadcrumbs][version]        = 2.1
