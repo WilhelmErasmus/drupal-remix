@@ -43,6 +43,7 @@
     dependencies[] = admin_views
     dependencies[] = auto_entitylabel
     dependencies[] = better_formats
+    dependencies[] = block_class
     dependencies[] = boxes
     dependencies[] = bulk_export
     dependencies[] = ccl

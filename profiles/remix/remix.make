@@ -25,6 +25,7 @@
     projects[admin_menu][version]                = 3.0-rc4
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
+    projects[block_class][version]               = 2.0
     projects[boxes][version]                     = 1.1
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
@@ -40,7 +41,7 @@
     projects[diff][version]                      = 3.2
     projects[ds][version]                        = 2.4
     projects[email][version]                     = 1.2
-    projects[entity][version]                    = 1.1
+    projects[entity][version]                    = 1.2
     projects[entitycache][version]               = 1.1
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
@@ -54,7 +55,7 @@
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.3
     projects[link][version]                      = 1.1
-    projects[login_security][version]            = 1.4
+    projects[login_security][version]            = 1.5
     projects[logintoboggan][version]             = 1.3
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2

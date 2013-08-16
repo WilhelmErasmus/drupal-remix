@@ -25,6 +25,7 @@
     projects[admin_menu][version]                =
     projects[auto_entitylabel][version]          =
     projects[better_formats][version]            =
+    projects[block_class][version]               =
     projects[boxes][version]                     =
     projects[ccl][version]                       =
     projects[chrome_frame][version]              =
