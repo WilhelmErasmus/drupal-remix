@@ -46,6 +46,7 @@
     projects[entityreference][version]           =
     projects[extlink][version]                   =
     projects[features][version]                  =
+    projects[features_extra][version]            =
     projects[field_collection][version]          =
     projects[field_group][version]               =
     projects[filefield_paths][version]           =
@@ -62,6 +63,7 @@
     projects[menu_block][version]                =
     projects[metatag][version]                   =
     projects[module_filter][version]             =
+    projects[node_export][version]               =
     projects[pagenotfound_reports][version]      =
     projects[panels][version]                    =
     projects[panels_breadcrumbs][version]        =
@@ -77,6 +79,7 @@
     projects[token_formatters][version]          =
     projects[token_tweaks][version]              =
     projects[transliteration][version]           =
+    projects[uuid][version]                      =
     projects[views][version]                     =
     projects[views_bulk_operations][version]     =
     projects[views_rss][version]                 =

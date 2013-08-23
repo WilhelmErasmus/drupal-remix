@@ -25,7 +25,7 @@
     projects[admin_menu][version]                = 3.0-rc4
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
-    projects[block_class][version]               = 2.0
+    projects[block_class][version]               = 2.1
     projects[boxes][version]                     = 1.1
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
@@ -46,6 +46,7 @@
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
     projects[features][version]                  = 2.0-rc2
+    projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta5
     projects[field_group][version]               = 1.1
     projects[filefield_paths][version]           = 1.0-beta4
@@ -62,10 +63,11 @@
     projects[menu_block][version]                = 2.3
     projects[metatag][version]                   = 1.0-beta7
     projects[module_filter][version]             = 1.8
+    projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.3
     projects[panels_breadcrumbs][version]        = 2.1
-    projects[password_policy][version]           = 1.4
+    projects[password_policy][version]           = 1.5
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
@@ -77,6 +79,7 @@
     projects[token_formatters][version]          = 1.2
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.1
+    projects[uuid][version]                      = 1.0-alpha5
     projects[views][version]                     = 3.7
     projects[views_bulk_operations][version]     = 3.1
     projects[views_rss][version]                 = 2.0-rc3
@@ -86,7 +89,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[zen][version]                       = 5.3
+    projects[zen][version]                       = 5.4
     projects[zen_slate][subdir]                  = "custom"
     projects[zen_slate][type]                    = "theme"
     projects[zen_slate][download][type]          = "git"
