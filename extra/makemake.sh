@@ -68,4 +68,6 @@ for line in "${lines[@]}"; do
 done
 
 IFS=$'\n'
-echo "${makelines[*]}" > remix.make
+echo "${makelines[*]}" > ../remix.make
+cp build-remix.make.template build-remix.make
+sed -i "s|--version--|${versions[drupal]}|g" build-remix.make
