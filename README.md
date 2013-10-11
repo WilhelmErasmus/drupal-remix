@@ -1,16 +1,6 @@
-    ┌──────────────────────────────────────────────────────────────────────────┐
-    │      ______                                                              │
-    │     //   ) )   Burtronix.co.za Drupal 7 Remix Profile                    │
-    │    //___/ /            __    __  ___  __      ___       __     ( )       │
-    │   / __  (   //   / / //  ) )  / /   //  ) ) //   ) ) //   ) ) / / \\ / / │
-    │  //    ) ) //   / / //       / /   //      //   / / //   / / / /   \/ /  │
-    │ //____/ / ((___( ( //       / /   //      ((___/ / //   / / / /    / /\  │
-    │                                                                          │
-    └──────────────────────────────────────────────────────────────────────────┘
-
-Description
-===========
-The Burtronix Drupal 7 Remix is a [Drupal](http://drupal.org) installation
+Drupal Remix
+============
+Drupal 7 Remix is a [Drupal](http://drupal.org) installation
 profile that installs a new Drupal website with many useful modules, configuring
 several of them in the process.
 
@@ -27,25 +17,14 @@ Instructions
 
 - Work in a folder where you want to install your Drupal Remix.
 
-- Clone Drupal Remix:
+- Run all this as one pasted command:
 
-    git clone git://github.com/RiaanBurger/drupal-remix.git
-
-- You just want the profiles folder:
-
-    mv drupal-remix/profiles ./
-
-    rm -Rf drupal-remix/
-
-- Now run drush make on the profile:
-
-    drush make profiles/remix/remix.make
-
+```
+drush make \
+  https://raw.github.com/RiaanBurger/drupal-remix/master/extra/build-remix.make \
+  -y --prepare-install \
+  && rm -rf sites/all/{modules,themes} \\
+  && mv profiles/remix/{libraries,modules,themes} sites/all/
+```
 - Access your website in the browser to complete your Drupal Remix installation.
 
-Customize
-=========
-
-- You can edit the remix.profile file to change the default language from English and location from South Africa to your own preference.
-
-- If you run the bash script, makemake.sh in profiles/remix it will generate a new remix.make file for you with updated versions for the projects.
