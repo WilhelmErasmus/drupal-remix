@@ -23,6 +23,7 @@
     projects[libraries][version]                 = 2.1
     projects[admin_views][version]               = 1.2
     projects[admin_menu][version]                = 3.0-rc4
+    projects[advagg][version]                    = 2.0
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -30,7 +31,7 @@
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0-beta1
-    projects[context][version]                   = 3.0-beta7
+    projects[context][version]                   = 3.0-rc1
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.3
     projects[custom_formatters][version]         = 2.2
@@ -39,17 +40,19 @@
     projects[date][version]                      = 2.6
     projects[devel][version]                     = 1.3
     projects[diff][version]                      = 3.2
+    projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.6
     projects[email][version]                     = 1.2
     projects[entity][version]                    = 1.2
     projects[entitycache][version]               = 1.1
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
-    projects[features][version]                  = 2.0-rc3
+    projects[features][version]                  = 2.0-rc5
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta5
-    projects[field_group][version]               = 1.2
+    projects[field_group][version]               = 1.3
     projects[filefield_paths][version]           = 1.0-beta4
+    projects[flexslider][version]                = 2.0-alpha3
     projects[fontyourface][version]              = 2.8
     projects[globalredirect][version]            = 1.5
     projects[google_analytics][version]          = 1.3
@@ -83,7 +86,6 @@
     projects[views][version]                     = 3.7
     projects[views_bulk_operations][version]     = 3.1
     projects[views_rss][version]                 = 2.0-rc3
-    projects[views_slideshow][version]           = 3.0
     projects[webform][version]                   = 3.19
     projects[xmlsitemap][version]                = 2.0-rc2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
@@ -108,3 +110,10 @@
     libraries[jquery.easing][download][url]      = "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"
     libraries[jquery.easing][directory_name]     = "jquery.easing"
     libraries[jquery.easing][destination]        = "libraries"
+; ┌────────────────────────────────────────────────────────────────────────────┐
+; │ Libraries - FlexSlider                                                     │
+; └────────────────────────────────────────────────────────────────────────────┘
+    libraries[flexslider][download][type]        = "get"
+    libraries[flexslider][download][url]         = "https://github.com/woothemes/FlexSlider/archive/version/2.1.zip"
+    libraries[flexslider][directory_name]        = "flexslider"
+    libraries[flexslider][destination]           = "libraries"

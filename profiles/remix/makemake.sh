@@ -14,7 +14,7 @@
 mapfile -t lines < remix.make.template
 projects=()
 for line in "${lines[@]}"; do
-  if [[ "${line}" == *version* ]]; then
+  if [[ "${line}" == *\[version\]* ]]; then
     project="${line}"
     project=${project#*projects\[}
     project=${project%%\]*}
@@ -34,14 +34,14 @@ for line in "${drush_rl_lines[@]}"; do
     project="${project#*\'}"
     project="${project%%\'*}"
     project="${project,,}"
-    #echo "project: ${project}"
+    # echo "project: ${project}"
   fi
   if [[ "${line}" == *Recommended* ]]; then
     version="${line}"
     version="${version#*\ }"
     version="${version%%\ *}"
     version="${version#*-}"
-    #echo "version: ${version}"
+    # echo "version: ${version}"
     versions["${project}"]="${version}"
   fi
 done
@@ -50,7 +50,7 @@ done
 # └────────────────────────────────────────────────────────────────────────────┘
 makelines=()
 for line in "${lines[@]}"; do
-  if [[ "${line}" == *version* ]]; then
+  if [[ "${line}" == *\[version\]* ]]; then
     project="${line}"
     project=${project#*projects\[}
     project=${project%%\]*}

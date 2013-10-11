@@ -40,7 +40,9 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     dependencies[] = actions_permissions
     dependencies[] = admin_menu
+    dependencies[] = admin_menu_toolbar
     dependencies[] = admin_views
+    dependencies[] = advagg
     dependencies[] = auto_entitylabel
     dependencies[] = better_formats
     dependencies[] = block_class
@@ -68,6 +70,7 @@
     dependencies[] = date_views
     dependencies[] = devel
     dependencies[] = diff
+    dependencies[] = drupalpeople
     dependencies[] = ds
     dependencies[] = ds_extras
     dependencies[] = ds_format
@@ -85,6 +88,8 @@
     dependencies[] = field_collection
     dependencies[] = field_group
     dependencies[] = filefield_paths
+    dependencies[] = flexslider
+    dependencies[] = flexslider_views
     dependencies[] = fontyourface
     dependencies[] = fontyourface_ui
     dependencies[] = globalredirect
@@ -130,8 +135,6 @@
     dependencies[] = views_content
     dependencies[] = views_rss
     dependencies[] = views_rss_core
-    dependencies[] = views_slideshow
-    dependencies[] = views_slideshow_cycle
     dependencies[] = views_ui
     dependencies[] = webform
     dependencies[] = xmlsitemap
