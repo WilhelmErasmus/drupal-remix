@@ -31,7 +31,7 @@
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0-beta1
-    projects[context][version]                   = 3.0-rc1
+    projects[context][version]                   = 3.1
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.3
     projects[custom_formatters][version]         = 2.2
@@ -47,7 +47,7 @@
     projects[entitycache][version]               = 1.1
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
-    projects[features][version]                  = 2.0-rc5
+    projects[features][version]                  = 2.0
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta5
     projects[field_group][version]               = 1.3
@@ -55,7 +55,7 @@
     projects[flexslider][version]                = 2.0-alpha3
     projects[fontyourface][version]              = 2.8
     projects[globalredirect][version]            = 1.5
-    projects[google_analytics][version]          = 1.3
+    projects[google_analytics][version]          = 1.4
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.3
     projects[link][version]                      = 1.1
