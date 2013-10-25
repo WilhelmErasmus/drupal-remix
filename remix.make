@@ -75,7 +75,7 @@
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
     projects[schemaorg][version]                 = 1.0-beta3
-    projects[simplified_menu_admin][version]     = 
+    projects[simplified_menu_admin][version]     = 1.0-beta2
     projects[strongarm][version]                 = 2.0
     projects[styleguide][version]                = 1.1
     projects[token][version]                     = 1.5
