@@ -44,7 +44,7 @@
     projects[ds][version]                        = 2.6
     projects[email][version]                     = 1.2
     projects[entity][version]                    = 1.2
-    projects[entitycache][version]               = 1.1
+    projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.0
     projects[extlink][version]                   = 1.13
     projects[features][version]                  = 2.0
