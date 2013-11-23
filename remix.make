@@ -12,7 +12,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.23
+    projects[drupal][version]                    = 7.24
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -23,7 +23,7 @@
     projects[libraries][version]                 = 2.1
     projects[admin_views][version]               = 1.2
     projects[admin_menu][version]                = 3.0-rc4
-    projects[advagg][version]                    = 2.1
+    projects[advagg][version]                    = 2.3
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -45,7 +45,7 @@
     projects[email][version]                     = 1.2
     projects[entity][version]                    = 1.2
     projects[entitycache][version]               = 1.2
-    projects[entityreference][version]           = 1.0
+    projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.13
     projects[features][version]                  = 2.0
     projects[features_extra][version]            = 1.0-beta1
@@ -59,13 +59,13 @@
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.3
     projects[link][version]                      = 1.1
-    projects[login_security][version]            = 1.7
+    projects[login_security][version]            = 1.8
     projects[logintoboggan][version]             = 1.3
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.3
     projects[metatag][version]                   = 1.0-beta7
-    projects[module_filter][version]             = 1.8
+    projects[module_filter][version]             = 2.0-alpha1
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.3
@@ -74,7 +74,7 @@
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
-    projects[schemaorg][version]                 = 1.0-beta3
+    projects[schemaorg][version]                 = 1.0-beta4
     projects[simplified_menu_admin][version]     = 1.0-beta2
     projects[strongarm][version]                 = 2.0
     projects[styleguide][version]                = 1.1
