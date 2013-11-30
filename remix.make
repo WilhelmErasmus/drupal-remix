@@ -58,7 +58,7 @@
     projects[google_analytics][version]          = 1.4
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.3
-    projects[link][version]                      = 1.1
+    projects[link][version]                      = 1.2
     projects[login_security][version]            = 1.8
     projects[logintoboggan][version]             = 1.3
     projects[menu_admin_per_menu][version]       = 1.0
