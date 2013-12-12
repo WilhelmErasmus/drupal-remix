@@ -30,7 +30,7 @@
     projects[boxes][version]                     = 1.1
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
-    projects[computed_field][version]            = 1.0-beta1
+    projects[computed_field][version]            = 1.0
     projects[context][version]                   = 3.1
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.3
@@ -65,7 +65,7 @@
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.3
     projects[metatag][version]                   = 1.0-beta7
-    projects[module_filter][version]             = 2.0-alpha1
+    projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.3
