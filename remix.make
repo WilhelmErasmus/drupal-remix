@@ -12,7 +12,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.24
+    projects[drupal][version]                    = 7.25
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -23,7 +23,7 @@
     projects[libraries][version]                 = 2.1
     projects[admin_views][version]               = 1.2
     projects[admin_menu][version]                = 3.0-rc4
-    projects[advagg][version]                    = 2.3
+    projects[advagg][version]                    = 2.4
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
