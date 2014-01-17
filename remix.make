@@ -12,7 +12,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.25
+    projects[drupal][version]                    = 7.26
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -64,7 +64,7 @@
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.3
-    projects[metatag][version]                   = 1.0-beta7
+    projects[metatag][version]                   = 1.0-beta8
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
