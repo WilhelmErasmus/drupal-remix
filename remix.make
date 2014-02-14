@@ -20,7 +20,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[libraries][version]                 = 2.1
+    projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.2
     projects[admin_menu][version]                = 3.0-rc4
     projects[advagg][version]                    = 2.4
@@ -33,12 +33,12 @@
     projects[computed_field][version]            = 1.0
     projects[context][version]                   = 3.2
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.3
+    projects[ctools][version]                    = 1.4
     projects[custom_formatters][version]         = 2.2
     ; Remove Custom Formatters makefile to prevent duplicate downloads - http://drupal.org/node/1721294#comment-6395368
     projects[custom_formatters][patch][]         = http://drupal.org/files/no_makefile-1721294-1.patch
     projects[date][version]                      = 2.7
-    projects[devel][version]                     = 1.3
+    projects[devel][version]                     = 1.4
     projects[diff][version]                      = 3.2
     projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.6
@@ -68,7 +68,7 @@
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
-    projects[panels][version]                    = 3.3
+    projects[panels][version]                    = 3.4
     projects[panels_breadcrumbs][version]        = 2.1
     projects[password_policy][version]           = 1.5
     projects[pathauto][version]                  = 1.2
@@ -86,7 +86,7 @@
     projects[views][version]                     = 3.7
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc3
-    projects[webform][version]                   = 3.19
+    projects[webform][version]                   = 3.20
     projects[xmlsitemap][version]                = 2.0-rc2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
