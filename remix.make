@@ -59,7 +59,7 @@
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.3
     projects[link][version]                      = 1.2
-    projects[login_security][version]            = 1.8
+    projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.3
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2
