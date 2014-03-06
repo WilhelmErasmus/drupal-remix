@@ -23,7 +23,7 @@
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.2
     projects[admin_menu][version]                = 3.0-rc4
-    projects[advagg][version]                    = 2.4
+    projects[advagg][version]                    = 2.5
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
