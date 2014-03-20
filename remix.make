@@ -49,7 +49,7 @@
     projects[extlink][version]                   = 1.13
     projects[features][version]                  = 2.0
     projects[features_extra][version]            = 1.0-beta1
-    projects[field_collection][version]          = 1.0-beta5
+    projects[field_collection][version]          = 1.0-beta7
     projects[field_group][version]               = 1.3
     projects[filefield_paths][version]           = 1.0-beta4
     projects[flexslider][version]                = 2.0-alpha3
@@ -81,13 +81,13 @@
     projects[token][version]                     = 1.5
     projects[token_formatters][version]          = 1.2
     projects[token_tweaks][version]              = 1.x-dev
-    projects[transliteration][version]           = 3.1
+    projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-alpha5
     projects[views][version]                     = 3.7
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc3
     projects[webform][version]                   = 3.20
-    projects[xmlsitemap][version]                = 2.0-rc2
+    projects[xmlsitemap][version]                = 2.0
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
