@@ -43,7 +43,7 @@
     projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.6
     projects[email][version]                     = 1.2
-    projects[entity][version]                    = 1.3
+    projects[entity][version]                    = 1.4
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.13
