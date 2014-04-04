@@ -57,7 +57,7 @@
     projects[globalredirect][version]            = 1.5
     projects[google_analytics][version]          = 1.4
     projects[insert][version]                    = 1.3
-    projects[jquery_update][version]             = 2.3
+    projects[jquery_update][version]             = 2.4
     projects[link][version]                      = 1.2
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.3
