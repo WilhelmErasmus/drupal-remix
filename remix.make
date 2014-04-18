@@ -12,7 +12,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.26
+    projects[drupal][version]                    = 7.27
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -42,11 +42,11 @@
     projects[diff][version]                      = 3.2
     projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.6
-    projects[email][version]                     = 1.2
+    projects[email][version]                     = 1.3
     projects[entity][version]                    = 1.5
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
-    projects[extlink][version]                   = 1.13
+    projects[extlink][version]                   = 1.16
     projects[features][version]                  = 2.0
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta7
