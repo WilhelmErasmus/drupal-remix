@@ -378,7 +378,10 @@ function remix_setup_module_update($variables) {
   variable_set('update_check_disabled', 1);
 
   // Check for updates weekly
-  variable_set('update_check_frequency', 7);
+  variable_set('update_check_frequency', 14);
+
+  // Don't e-mail
+  variable_set('update_notify_emails', '');
 
   return $variables;
 }
