@@ -47,7 +47,7 @@
     projects[entity][version]                    = 1.5
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
-    projects[extlink][version]                   = 1.16
+    projects[extlink][version]                   = 1.17
     projects[features][version]                  = 2.0
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta7
@@ -92,7 +92,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[zen][version]                       = 5.4
+    projects[zen][version]                       = 5.5
     projects[zen_slate][subdir]                  = "custom"
     projects[zen_slate][type]                    = "theme"
     projects[zen_slate][download][type]          = "git"
