@@ -93,7 +93,6 @@
     dependencies[] = fontyourface
     dependencies[] = fontyourface_ui
     dependencies[] = globalredirect
-    dependencies[] = googleanalytics
     dependencies[] = google_fonts_api
     dependencies[] = insert
     dependencies[] = jquery_update
