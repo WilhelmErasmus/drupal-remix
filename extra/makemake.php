@@ -39,10 +39,33 @@ foreach($projects as $n => $project) {
 }
 
 foreach($lines as $line_number => $line) {
+
+  // Core
+  if (strpos($line, 'core  ')) {
+
+    $project = 'drupal';
+    $line = substr($line, 0, strpos($line, '='));
+
+    if (isset($recommended[$project])) {
+      sort($recommended[$project]);
+      $line = $line . '= ' . end($recommended[$project]);
+    } elseif (isset($supported[$project])) {
+      sort($supported[$project]);
+      $line = $line . '= ' . end($supported[$project]);
+    } else {
+      $line = $line . '= ' . 'MANUALLY ADD';
+    }
+
+    $lines[$line_number] = $line;
+  }
+
+  // Projects
   if (strpos($line, '[version]')) {
+
     $project = substr(trim($line), 9);
     $project = substr($project, 0, strpos($project, ']'));
     $line = substr($line, 0, strpos($line, '='));
+
     if (isset($recommended[$project])) {
       sort($recommended[$project]);
       $line = $line . '= ' . array_pop($recommended[$project]);
@@ -52,6 +75,7 @@ foreach($lines as $line_number => $line) {
     } else {
       $line = $line . '= ' . 'MANUALLY ADD';
     }
+
     $lines[$line_number] = $line;
   }
 }
