@@ -456,6 +456,7 @@ function remix_setup_recommendations_page($variables) {
         array('title' => 'Flood control',                                'name' => 'flood_control',            'description' => 'Add an administration interface for hidden flood control variables in Drupal 7.'),
         array('title' => 'FooTable',                                     'name' => 'footable',                 'description' => 'Provides integration for the jQuery FooTable plugin for creating responsive tables.'),
         array('title' => 'Gallery formatter',                            'name' => 'galleryformatter',         'description' => 'Provides a CCK formatter for image fields, which will turn any image field into a jQuery Gallery.'),
+        array('title' => 'Google Analytics',                             'name' => 'google_analytics',         'description' => 'Adds the Google Analytics web statistics tracking system to your website.'),
         array('title' => 'Google Analytics Reports',                     'name' => 'google_analytics_reports', 'description' => 'Provides graphical reporting of your site\'s tracking data.'),
         array('title' => 'HTML Purifier',                                'name' => 'htmlpurifier',             'description' => 'A standards-compliant HTML filter library.'),
         array('title' => 'IMCE',                                         'name' => 'imce',                     'description' => 'An image/file uploader and browser that supports personal directories and quota.'),

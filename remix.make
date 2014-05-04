@@ -56,7 +56,6 @@
     projects[flexslider][version]                = 2.0-alpha3
     projects[fontyourface][version]              = 2.8
     projects[globalredirect][version]            = 1.5
-    projects[google_analytics][version]          = 1.4
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.4
     projects[link][version]                      = 1.2
