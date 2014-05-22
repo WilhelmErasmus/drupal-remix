@@ -55,6 +55,7 @@
     projects[filefield_paths][version]           = 1.0-beta4
     projects[flexslider][version]                = 2.0-alpha3
     projects[fontyourface][version]              = 2.8
+    projects[fpa][version]                       = 2.5
     projects[globalredirect][version]            = 1.5
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.4
@@ -70,7 +71,7 @@
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.4
     projects[panels_breadcrumbs][version]        = 2.1
-    projects[password_policy][version]           = 1.5
+    projects[password_policy][version]           = 1.6
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
@@ -83,7 +84,7 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-alpha5
-    projects[views][version]                     = 3.7
+    projects[views][version]                     = 3.8
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc3
     projects[webform][version]                   = 3.20

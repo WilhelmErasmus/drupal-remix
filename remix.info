@@ -92,6 +92,7 @@
     dependencies[] = flexslider_views
     dependencies[] = fontyourface
     dependencies[] = fontyourface_ui
+    dependencies[] = fpa
     dependencies[] = globalredirect
     dependencies[] = google_fonts_api
     dependencies[] = insert
