@@ -22,7 +22,7 @@
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
     projects[libraries][version]                 = 2.2
-    projects[admin_views][version]               = 1.2
+    projects[admin_views][version]               = 1.3
     projects[admin_menu][version]                = 3.0-rc4
     projects[advagg][version]                    = 2.6
     projects[auto_entitylabel][version]          = 1.2
