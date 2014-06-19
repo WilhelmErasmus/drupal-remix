@@ -24,7 +24,7 @@
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.3
     projects[admin_menu][version]                = 3.0-rc4
-    projects[advagg][version]                    = 2.6
+    projects[advagg][version]                    = 2.7
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -71,7 +71,7 @@
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.4
     projects[panels_breadcrumbs][version]        = 2.1
-    projects[password_policy][version]           = 1.6
+    projects[password_policy][version]           = 1.7
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
