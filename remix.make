@@ -28,7 +28,7 @@
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
-    projects[boxes][version]                     = 1.1
+    projects[boxes][version]                     = 1.2
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0
