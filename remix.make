@@ -61,11 +61,11 @@
     projects[jquery_update][version]             = 2.4
     projects[link][version]                      = 1.2
     projects[login_security][version]            = 1.9
-    projects[logintoboggan][version]             = 1.3
+    projects[logintoboggan][version]             = 1.4
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.4
-    projects[metatag][version]                   = 1.0-beta9
+    projects[metatag][version]                   = 1.0-rc1
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
