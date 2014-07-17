@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.28
+    core                                         = 7.29
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.28
+    projects[drupal][version]                    = 7.29
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -71,7 +71,7 @@
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.4
     projects[panels_breadcrumbs][version]        = 2.1
-    projects[password_policy][version]           = 1.8
+    projects[password_policy][version]           = 1.9
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
