@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.30
+    core                                         = 7.31
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.30
+    projects[drupal][version]                    = 7.31
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -48,7 +48,7 @@
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
-    projects[features][version]                  = 2.1
+    projects[features][version]                  = 2.2
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta7
     projects[field_group][version]               = 1.4
@@ -65,7 +65,7 @@
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc2
     projects[menu_block][version]                = 2.4
-    projects[metatag][version]                   = 1.0-rc1
+    projects[metatag][version]                   = 1.0-rc2
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
