@@ -55,7 +55,7 @@
     projects[filefield_paths][version]           = 1.0-beta4
     projects[flexslider][version]                = 2.0-alpha3
     projects[fontyourface][version]              = 2.8
-    projects[fpa][version]                       = 2.5
+    projects[fpa][version]                       = 2.6
     projects[globalredirect][version]            = 1.5
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.4
