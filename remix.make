@@ -57,6 +57,7 @@
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
     projects[globalredirect][version]            = 1.5
+    projects[imagecache_token][version]          = 1.x-dev
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.4
     projects[link][version]                      = 1.2
@@ -70,7 +71,7 @@
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.4
-    projects[panels_breadcrumbs][version]        = 2.1
+    projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.9
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0

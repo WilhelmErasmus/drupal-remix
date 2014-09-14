@@ -95,6 +95,7 @@
     dependencies[] = fpa
     dependencies[] = globalredirect
     dependencies[] = google_fonts_api
+    dependencies[] = imagecache_token
     dependencies[] = insert
     dependencies[] = jquery_update
     dependencies[] = libraries
