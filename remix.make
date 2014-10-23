@@ -60,11 +60,11 @@
     projects[imagecache_token][version]          = 1.x-dev
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.4
-    projects[link][version]                      = 1.2
+    projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.4
     projects[menu_admin_per_menu][version]       = 1.0
-    projects[menu_attributes][version]           = 1.0-rc2
+    projects[menu_attributes][version]           = 1.0-rc3
     projects[menu_block][version]                = 2.4
     projects[metatag][version]                   = 1.4
     projects[module_filter][version]             = 2.0-alpha2
