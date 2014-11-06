@@ -50,7 +50,7 @@
     projects[extlink][version]                   = 1.18
     projects[features][version]                  = 2.2
     projects[features_extra][version]            = 1.0-beta1
-    projects[field_collection][version]          = 1.0-beta7
+    projects[field_collection][version]          = 1.0-beta8
     projects[field_group][version]               = 1.4
     projects[filefield_paths][version]           = 1.0-beta4
     projects[flexslider][version]                = 2.0-alpha3
