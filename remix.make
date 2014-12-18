@@ -32,7 +32,7 @@
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0
-    projects[context][version]                   = 3.3
+    projects[context][version]                   = 3.5
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.5
     projects[custom_formatters][version]         = 2.2
