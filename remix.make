@@ -23,7 +23,7 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.3
-    projects[admin_menu][version]                = 3.0-rc4
+    projects[admin_menu][version]                = 3.0-rc5
     projects[advagg][version]                    = 2.7
     projects[auto_entitylabel][version]          = 1.2
     projects[better_formats][version]            = 1.0-beta1
@@ -87,7 +87,7 @@
     projects[uuid][version]                      = 1.0-alpha6
     projects[views][version]                     = 3.8
     projects[views_bulk_operations][version]     = 3.2
-    projects[views_rss][version]                 = 2.0-rc3
+    projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.2
     projects[xmlsitemap][version]                = 2.1
 ; ┌────────────────────────────────────────────────────────────────────────────┐
