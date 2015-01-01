@@ -25,7 +25,7 @@
     projects[admin_views][version]               = 1.3
     projects[admin_menu][version]                = 3.0-rc5
     projects[advagg][version]                    = 2.7
-    projects[auto_entitylabel][version]          = 1.2
+    projects[auto_entitylabel][version]          = 1.3
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
     projects[boxes][version]                     = 1.2
