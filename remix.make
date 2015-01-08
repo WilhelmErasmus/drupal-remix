@@ -32,7 +32,7 @@
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.0
-    projects[context][version]                   = 3.5
+    projects[context][version]                   = 3.6
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.5
     projects[custom_formatters][version]         = 2.2
@@ -48,7 +48,7 @@
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
-    projects[features][version]                  = 2.2
+    projects[features][version]                  = 2.3
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta8
     projects[field_group][version]               = 1.4
