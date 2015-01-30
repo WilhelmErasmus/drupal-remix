@@ -34,7 +34,7 @@
     projects[computed_field][version]            = 1.0
     projects[context][version]                   = 3.6
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.5
+    projects[ctools][version]                    = 1.6
     projects[custom_formatters][version]         = 2.2
     ; Remove Custom Formatters makefile to prevent duplicate downloads - http://drupal.org/node/1721294#comment-6395368
     projects[custom_formatters][patch][]         = http://drupal.org/files/no_makefile-1721294-1.patch
@@ -59,7 +59,7 @@
     projects[globalredirect][version]            = 1.5
     projects[imagecache_token][version]          = 1.x-dev
     projects[insert][version]                    = 1.3
-    projects[jquery_update][version]             = 2.4
+    projects[jquery_update][version]             = 2.5
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.4
@@ -70,13 +70,13 @@
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
-    projects[panels][version]                    = 3.4
+    projects[panels][version]                    = 3.5
     projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.10
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
-    projects[schemaorg][version]                 = 1.0-beta4
+    projects[schemaorg][version]                 = 1.0-rc1
     projects[simplified_menu_admin][version]     = 1.0-beta2
     projects[strongarm][version]                 = 2.0
     projects[styleguide][version]                = 1.1
