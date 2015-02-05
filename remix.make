@@ -65,7 +65,7 @@
     projects[logintoboggan][version]             = 1.4
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc3
-    projects[menu_block][version]                = 2.4
+    projects[menu_block][version]                = 2.5
     projects[metatag][version]                   = 1.4
     projects[module_filter][version]             = 2.0-alpha2
     projects[node_export][version]               = 3.0
@@ -89,7 +89,7 @@
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.2
-    projects[xmlsitemap][version]                = 2.1
+    projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
