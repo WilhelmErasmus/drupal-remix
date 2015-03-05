@@ -48,7 +48,7 @@
     projects[entitycache][version]               = 1.2
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
-    projects[features][version]                  = 2.3
+    projects[features][version]                  = 2.4
     projects[features_extra][version]            = 1.0-beta1
     projects[field_collection][version]          = 1.0-beta8
     projects[field_group][version]               = 1.4
@@ -88,7 +88,7 @@
     projects[views][version]                     = 3.10
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.3
+    projects[webform][version]                   = 4.4
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
