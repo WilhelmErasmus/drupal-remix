@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.34
+    core                                         = 7.35
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.34
+    projects[drupal][version]                    = 7.35
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -34,7 +34,7 @@
     projects[computed_field][version]            = 1.0
     projects[context][version]                   = 3.6
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.6
+    projects[ctools][version]                    = 1.7
     projects[custom_formatters][version]         = 2.2
     ; Remove Custom Formatters makefile to prevent duplicate downloads - http://drupal.org/node/1721294#comment-6395368
     projects[custom_formatters][patch][]         = http://drupal.org/files/no_makefile-1721294-1.patch
@@ -88,7 +88,7 @@
     projects[views][version]                     = 3.10
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.4
+    projects[webform][version]                   = 4.5
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
