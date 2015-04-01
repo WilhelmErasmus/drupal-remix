@@ -72,7 +72,7 @@
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.5
     projects[panels_breadcrumbs][version]        = 2.2
-    projects[password_policy][version]           = 1.10
+    projects[password_policy][version]           = 1.11
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc1
@@ -88,7 +88,7 @@
     projects[views][version]                     = 3.10
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.6
+    projects[webform][version]                   = 4.7
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
