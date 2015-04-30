@@ -85,10 +85,10 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-alpha6
-    projects[views][version]                     = 3.10
+    projects[views][version]                     = 3.11
     projects[views_bulk_operations][version]     = 3.2
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.7
+    projects[webform][version]                   = 4.8
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
