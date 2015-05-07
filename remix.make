@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.36
+    core                                         = 7.37
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.36
+    projects[drupal][version]                    = 7.37
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -62,7 +62,7 @@
     projects[jquery_update][version]             = 2.5
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
-    projects[logintoboggan][version]             = 1.4
+    projects[logintoboggan][version]             = 1.5
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc3
     projects[menu_block][version]                = 2.5
