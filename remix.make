@@ -24,7 +24,7 @@
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.4
     projects[admin_menu][version]                = 3.0-rc5
-    projects[advagg][version]                    = 2.8
+    projects[advagg][version]                    = 2.10
     projects[auto_entitylabel][version]          = 1.3
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -42,7 +42,7 @@
     projects[devel][version]                     = 1.5
     projects[diff][version]                      = 3.2
     projects[drupalpeople][version]              = 1.1
-    projects[ds][version]                        = 2.8
+    projects[ds][version]                        = 2.10
     projects[email][version]                     = 1.3
     projects[entity][version]                    = 1.6
     projects[entitycache][version]               = 1.2
@@ -59,7 +59,7 @@
     projects[globalredirect][version]            = 1.5
     projects[imagecache_token][version]          = 1.x-dev
     projects[insert][version]                    = 1.3
-    projects[jquery_update][version]             = 2.5
+    projects[jquery_update][version]             = 3.0-alpha1
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.5
