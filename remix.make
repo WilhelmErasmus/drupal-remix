@@ -59,14 +59,14 @@
     projects[globalredirect][version]            = 1.5
     projects[imagecache_token][version]          = 1.x-dev
     projects[insert][version]                    = 1.3
-    projects[jquery_update][version]             = 3.0-alpha1
+    projects[jquery_update][version]             = 3.0-alpha2
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.5
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc3
-    projects[menu_block][version]                = 2.5
-    projects[metatag][version]                   = 1.4
+    projects[menu_block][version]                = 2.6
+    projects[metatag][version]                   = 1.5
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
