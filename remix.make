@@ -24,7 +24,7 @@
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.4
     projects[admin_menu][version]                = 3.0-rc5
-    projects[advagg][version]                    = 2.11
+    projects[advagg][version]                    = 2.13
     projects[auto_entitylabel][version]          = 1.3
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -65,8 +65,8 @@
     projects[logintoboggan][version]             = 1.5
     projects[menu_admin_per_menu][version]       = 1.0
     projects[menu_attributes][version]           = 1.0-rc3
-    projects[menu_block][version]                = 2.6
-    projects[metatag][version]                   = 1.5
+    projects[menu_block][version]                = 2.7
+    projects[metatag][version]                   = 1.6
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
@@ -75,7 +75,7 @@
     projects[password_policy][version]           = 1.11
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
-    projects[redirect][version]                  = 1.0-rc1
+    projects[redirect][version]                  = 1.0-rc2
     projects[schemaorg][version]                 = 1.0-rc1
     projects[simplified_menu_admin][version]     = 1.0-beta2
     projects[strongarm][version]                 = 2.0
@@ -86,7 +86,7 @@
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-alpha6
     projects[views][version]                     = 3.11
-    projects[views_bulk_operations][version]     = 3.2
+    projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.9
     projects[xmlsitemap][version]                = 2.2
