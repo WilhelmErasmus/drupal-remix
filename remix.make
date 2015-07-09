@@ -22,7 +22,7 @@
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
     projects[libraries][version]                 = 2.2
-    projects[admin_views][version]               = 1.4
+    projects[admin_views][version]               = 1.5
     projects[admin_menu][version]                = 3.0-rc5
     projects[advagg][version]                    = 2.13
     projects[auto_entitylabel][version]          = 1.3
@@ -35,7 +35,7 @@
     projects[context][version]                   = 3.6
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.7
-    projects[custom_formatters][version]         = 2.2
+    projects[custom_formatters][version]         = 2.4
     ; Remove Custom Formatters makefile to prevent duplicate downloads - http://drupal.org/node/1721294#comment-6395368
     projects[custom_formatters][patch][]         = http://drupal.org/files/no_makefile-1721294-1.patch
     projects[date][version]                      = 2.8
@@ -75,7 +75,7 @@
     projects[password_policy][version]           = 1.11
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
-    projects[redirect][version]                  = 1.0-rc2
+    projects[redirect][version]                  = 1.0-rc3
     projects[schemaorg][version]                 = 1.0-rc1
     projects[simplified_menu_admin][version]     = 1.0-beta2
     projects[strongarm][version]                 = 2.0
