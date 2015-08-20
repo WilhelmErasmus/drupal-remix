@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.38
+    core                                         = 7.39
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.38
+    projects[drupal][version]                    = 7.39
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -34,7 +34,7 @@
     projects[computed_field][version]            = 1.0
     projects[context][version]                   = 3.6
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.7
+    projects[ctools][version]                    = 1.9
     projects[custom_formatters][version]         = 2.4
     projects[date][version]                      = 2.8
     projects[devel][version]                     = 1.5
@@ -61,7 +61,7 @@
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.5
-    projects[menu_admin_per_menu][version]       = 1.0
+    projects[menu_admin_per_menu][version]       = 1.1
     projects[menu_attributes][version]           = 1.0-rc3
     projects[menu_block][version]                = 2.7
     projects[metatag][version]                   = 1.7
@@ -75,7 +75,7 @@
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc3
     projects[schemaorg][version]                 = 1.0-rc1
-    projects[simplified_menu_admin][version]     = 1.0-beta2
+    projects[simplified_menu_admin][version]     = 1.0
     projects[strongarm][version]                 = 2.0
     projects[styleguide][version]                = 1.1
     projects[token][version]                     = 1.6
