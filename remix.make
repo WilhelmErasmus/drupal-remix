@@ -24,7 +24,7 @@
     projects[libraries][version]                 = 2.2
     projects[admin_views][version]               = 1.5
     projects[admin_menu][version]                = 3.0-rc5
-    projects[advagg][version]                    = 2.15
+    projects[advagg][version]                    = 2.16
     projects[auto_entitylabel][version]          = 1.3
     projects[better_formats][version]            = 1.0-beta1
     projects[block_class][version]               = 2.1
@@ -50,7 +50,7 @@
     projects[features_extra][version]            = 1.0
     projects[field_collection][version]          = 1.0-beta8
     projects[field_group][version]               = 1.4
-    projects[filefield_paths][version]           = 1.0-beta4
+    projects[filefield_paths][version]           = 1.0-rc1
     projects[flexslider][version]                = 2.0-rc1
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
@@ -70,7 +70,7 @@
     projects[pagenotfound_reports][version]      = 1.2
     projects[panels][version]                    = 3.5
     projects[panels_breadcrumbs][version]        = 2.2
-    projects[password_policy][version]           = 1.11
+    projects[password_policy][version]           = 1.12
     projects[pathauto][version]                  = 1.2
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc3
