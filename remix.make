@@ -86,7 +86,7 @@
     projects[views][version]                     = 3.11
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.10
+    projects[webform][version]                   = 4.11
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
