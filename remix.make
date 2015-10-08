@@ -71,7 +71,7 @@
     projects[panels][version]                    = 3.5
     projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.12
-    projects[pathauto][version]                  = 1.2
+    projects[pathauto][version]                  = 1.3
     projects[porterstemmer][version]             = 1.0
     projects[redirect][version]                  = 1.0-rc3
     projects[schemaorg][version]                 = 1.0-rc1
@@ -82,7 +82,7 @@
     projects[token_formatters][version]          = 1.2
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
-    projects[uuid][version]                      = 1.0-alpha6
+    projects[uuid][version]                      = 1.0-beta1
     projects[views][version]                     = 3.11
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
