@@ -43,14 +43,14 @@
     projects[ds][version]                        = 2.11
     projects[email][version]                     = 1.3
     projects[entity][version]                    = 1.6
-    projects[entitycache][version]               = 1.2
+    projects[entitycache][version]               = 1.5
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
     projects[features][version]                  = 2.7
     projects[features_extra][version]            = 1.0
-    projects[field_collection][version]          = 1.0-beta9
+    projects[field_collection][version]          = 1.0-beta10
     projects[field_group][version]               = 1.4
-    projects[filefield_paths][version]           = 1.0-rc1
+    projects[filefield_paths][version]           = 1.0-rc2
     projects[flexslider][version]                = 2.0-rc1
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
@@ -86,7 +86,7 @@
     projects[views][version]                     = 3.11
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
-    projects[webform][version]                   = 4.11
+    projects[webform][version]                   = 4.12
     projects[xmlsitemap][version]                = 2.2
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
