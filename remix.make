@@ -57,7 +57,7 @@
     projects[globalredirect][version]            = 1.5
     projects[imagecache_token][version]          = 1.0-rc1
     projects[insert][version]                    = 1.3
-    projects[jquery_update][version]             = 3.0-alpha3
+    projects[jquery_update][version]             = 2.7
     projects[link][version]                      = 1.3
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.5
@@ -83,7 +83,7 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-beta1
-    projects[views][version]                     = 3.11
+    projects[views][version]                     = 3.12
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.12
