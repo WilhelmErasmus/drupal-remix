@@ -21,7 +21,7 @@ Instructions
 drush make \
   https://raw.github.com/RiaanBurger/drupal-remix/master/extra/build-remix.make \
   -y --prepare-install \
-  && rm -rf sites/all/{modules,themes} \
+  && rm -rf sites/all/{libraries,modules,themes} \
   && mv profiles/remix/{libraries,modules,themes} sites/all/
 ```
 - Access your website in the browser to complete your Drupal Remix installation.
