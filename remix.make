@@ -50,7 +50,7 @@
     projects[features_extra][version]            = 1.0
     projects[field_collection][version]          = 1.0-beta10
     projects[field_group][version]               = 1.4
-    projects[filefield_paths][version]           = 1.0-rc2
+    projects[filefield_paths][version]           = 1.0-rc3
     projects[flexslider][version]                = 2.0-rc1
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
@@ -83,7 +83,7 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-beta1
-    projects[views][version]                     = 3.12
+    projects[views][version]                     = 3.13
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.12
