@@ -50,7 +50,7 @@
     projects[features_extra][version]            = 1.0
     projects[field_collection][version]          = 1.0-beta10
     projects[field_group][version]               = 1.4
-    projects[filefield_paths][version]           = 1.0-rc3
+    projects[filefield_paths][version]           = 1.0
     projects[flexslider][version]                = 2.0-rc1
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
