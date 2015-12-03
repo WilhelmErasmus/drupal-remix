@@ -91,7 +91,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[zen][version]                       = 5.5
+    projects[zen][version]                       = 5.6
     projects[zen_slate][subdir]                  = "custom"
     projects[zen_slate][type]                    = "theme"
     projects[zen_slate][download][type]          = "git"
