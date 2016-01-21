@@ -40,7 +40,7 @@
     projects[devel][version]                     = 1.5
     projects[diff][version]                      = 3.2
     projects[drupalpeople][version]              = 1.1
-    projects[ds][version]                        = 2.11
+    projects[ds][version]                        = 2.12
     projects[email][version]                     = 1.3
     projects[entity][version]                    = 1.6
     projects[entitycache][version]               = 1.5
@@ -58,13 +58,13 @@
     projects[imagecache_token][version]          = 1.0-rc1
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.7
-    projects[link][version]                      = 1.3
+    projects[link][version]                      = 1.4
     projects[login_security][version]            = 1.9
     projects[logintoboggan][version]             = 1.5
     projects[menu_admin_per_menu][version]       = 1.1
     projects[menu_attributes][version]           = 1.0-rc3
     projects[menu_block][version]                = 2.7
-    projects[metatag][version]                   = 1.7
+    projects[metatag][version]                   = 1.8
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.0
     projects[pagenotfound_reports][version]      = 1.2
