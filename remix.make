@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.41
+    core                                         = 7.42
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.41
+    projects[drupal][version]                    = 7.42
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -48,7 +48,7 @@
     projects[extlink][version]                   = 1.18
     projects[features][version]                  = 2.7
     projects[features_extra][version]            = 1.0
-    projects[field_collection][version]          = 1.0-beta10
+    projects[field_collection][version]          = 1.0-beta11
     projects[field_group][version]               = 1.5
     projects[filefield_paths][version]           = 1.0
     projects[flexslider][version]                = 2.0-rc1
