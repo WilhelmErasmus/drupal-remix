@@ -55,7 +55,7 @@
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
     projects[globalredirect][version]            = 1.5
-    projects[imagecache_token][version]          = 1.0-rc1
+    projects[imagecache_token][version]          = 1.0-rc2
     projects[insert][version]                    = 1.3
     projects[jquery_update][version]             = 2.7
     projects[link][version]                      = 1.4
