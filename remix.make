@@ -42,11 +42,11 @@
     projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.13
     projects[email][version]                     = 1.3
-    projects[entity][version]                    = 1.6
+    projects[entity][version]                    = 1.7
     projects[entitycache][version]               = 1.5
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
-    projects[features][version]                  = 2.7
+    projects[features][version]                  = 2.8
     projects[features_extra][version]            = 1.0
     projects[field_collection][version]          = 1.0-beta11
     projects[field_group][version]               = 1.5
