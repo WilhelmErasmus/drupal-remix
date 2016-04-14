@@ -46,7 +46,7 @@
     projects[entitycache][version]               = 1.5
     projects[entityreference][version]           = 1.1
     projects[extlink][version]                   = 1.18
-    projects[features][version]                  = 2.8
+    projects[features][version]                  = 2.9
     projects[features_extra][version]            = 1.0
     projects[field_collection][version]          = 1.0-beta11
     projects[field_group][version]               = 1.5
