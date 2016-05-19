@@ -21,7 +21,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[libraries][version]                 = 2.2
+    projects[libraries][version]                 = 2.3
     projects[admin_views][version]               = 1.5
     projects[admin_menu][version]                = 3.0-rc5
     projects[advagg][version]                    = 2.18
@@ -32,7 +32,7 @@
     projects[ccl][version]                       = 1.5
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.1
-    projects[context][version]                   = 3.6
+    projects[context][version]                   = 3.7
     projects[context_admin][version]             = 1.2
     projects[ctools][version]                    = 1.9
     projects[custom_formatters][version]         = 2.4
@@ -91,7 +91,7 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[zen][version]                       = 5.6
+    projects[zen][version]                       = 6.0
     projects[zen_slate][subdir]                  = "custom"
     projects[zen_slate][type]                    = "theme"
     projects[zen_slate][download][type]          = "git"
