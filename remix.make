@@ -87,11 +87,11 @@
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.12
-    projects[xmlsitemap][version]                = 2.2
+    projects[xmlsitemap][version]                = 2.3
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Themes                                                                     │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    projects[zen][version]                       = 6.0
+    projects[zen][version]                       = 6.3
     projects[zen_slate][subdir]                  = "custom"
     projects[zen_slate][type]                    = "theme"
     projects[zen_slate][download][type]          = "git"
