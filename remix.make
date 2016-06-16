@@ -10,10 +10,10 @@
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Make Information                                                           │
 ; └────────────────────────────────────────────────────────────────────────────┘
-    core                                         = 7.43
+    core                                         = 7.44
     api                                          = 2
     projects[drupal][type]                       = core
-    projects[drupal][version]                    = 7.43
+    projects[drupal][version]                    = 7.44
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Configuration                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
@@ -83,7 +83,7 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-beta1
-    projects[views][version]                     = 3.13
+    projects[views][version]                     = 3.14
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.12
