@@ -22,7 +22,7 @@
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
     projects[libraries][version]                 = 2.3
-    projects[admin_views][version]               = 1.5
+    projects[admin_views][version]               = 1.6
     projects[admin_menu][version]                = 3.0-rc5
     projects[advagg][version]                    = 2.18
     projects[auto_entitylabel][version]          = 1.3
@@ -82,7 +82,7 @@
     projects[token_formatters][version]          = 1.2
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
-    projects[uuid][version]                      = 1.0-beta1
+    projects[uuid][version]                      = 1.0-beta2
     projects[views][version]                     = 3.14
     projects[views_bulk_operations][version]     = 3.3
     projects[views_rss][version]                 = 2.0-rc4
