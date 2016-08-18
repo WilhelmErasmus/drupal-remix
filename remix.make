@@ -34,7 +34,7 @@
     projects[computed_field][version]            = 1.1
     projects[context][version]                   = 3.7
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.9
+    projects[ctools][version]                    = 1.10
     projects[custom_formatters][version]         = 2.4
     projects[date][version]                      = 2.9
     projects[devel][version]                     = 1.5
@@ -68,7 +68,7 @@
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.1
     projects[pagenotfound_reports][version]      = 1.2
-    projects[panels][version]                    = 3.5
+    projects[panels][version]                    = 3.6
     projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.12
     projects[pathauto][version]                  = 1.3
