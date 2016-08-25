@@ -68,7 +68,7 @@
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.1
     projects[pagenotfound_reports][version]      = 1.2
-    projects[panels][version]                    = 3.6
+    projects[panels][version]                    = 3.7
     projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.12
     projects[pathauto][version]                  = 1.3
