@@ -34,7 +34,7 @@
     projects[computed_field][version]            = 1.1
     projects[context][version]                   = 3.7
     projects[context_admin][version]             = 1.2
-    projects[ctools][version]                    = 1.11
+    projects[ctools][version]                    = 1.12
     projects[custom_formatters][version]         = 2.4
     projects[date][version]                      = 2.9
     projects[devel][version]                     = 1.5
@@ -48,7 +48,7 @@
     projects[extlink][version]                   = 1.18
     projects[features][version]                  = 2.10
     projects[features_extra][version]            = 1.0
-    projects[field_collection][version]          = 1.0-beta11
+    projects[field_collection][version]          = 1.0-beta12
     projects[field_group][version]               = 1.5
     projects[filefield_paths][version]           = 1.0
     projects[flexslider][version]                = 2.0-rc1
@@ -72,7 +72,7 @@
     projects[panels_breadcrumbs][version]        = 2.2
     projects[password_policy][version]           = 1.12
     projects[pathauto][version]                  = 1.3
-    projects[porterstemmer][version]             = 1.0
+    projects[porterstemmer][version]             = 1.1
     projects[redirect][version]                  = 1.0-rc3
     projects[schemaorg][version]                 = 1.0-rc1
     projects[simplified_menu_admin][version]     = 1.0
