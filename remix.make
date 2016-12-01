@@ -64,7 +64,7 @@
     projects[menu_admin_per_menu][version]       = 1.1
     projects[menu_attributes][version]           = 1.0
     projects[menu_block][version]                = 2.7
-    projects[metatag][version]                   = 1.17
+    projects[metatag][version]                   = 1.18
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.1
     projects[pagenotfound_reports][version]      = 1.2
