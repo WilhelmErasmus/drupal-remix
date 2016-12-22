@@ -38,7 +38,7 @@
     projects[custom_formatters][version]         = 2.4
     projects[date][version]                      = 2.9
     projects[devel][version]                     = 1.5
-    projects[diff][version]                      = 3.2
+    projects[diff][version]                      = 3.3
     projects[drupalpeople][version]              = 1.1
     projects[ds][version]                        = 2.14
     projects[email][version]                     = 1.3
