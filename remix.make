@@ -51,7 +51,7 @@
     projects[field_collection][version]          = 1.0-beta12
     projects[field_group][version]               = 1.5
     projects[filefield_paths][version]           = 1.0
-    projects[flexslider][version]                = 2.0-rc1
+    projects[flexslider][version]                = 2.0-rc2
     projects[fontyourface][version]              = 2.8
     projects[fpa][version]                       = 2.6
     projects[globalredirect][version]            = 1.5
@@ -64,7 +64,7 @@
     projects[menu_admin_per_menu][version]       = 1.1
     projects[menu_attributes][version]           = 1.0
     projects[menu_block][version]                = 2.7
-    projects[metatag][version]                   = 1.20
+    projects[metatag][version]                   = 1.21
     projects[module_filter][version]             = 2.0
     projects[node_export][version]               = 3.1
     projects[pagenotfound_reports][version]      = 1.2
