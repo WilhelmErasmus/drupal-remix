@@ -83,8 +83,8 @@
     projects[token_tweaks][version]              = 1.x-dev
     projects[transliteration][version]           = 3.2
     projects[uuid][version]                      = 1.0-beta2
-    projects[views][version]                     = 3.14
-    projects[views_bulk_operations][version]     = 3.3
+    projects[views][version]                     = 3.15
+    projects[views_bulk_operations][version]     = 3.4
     projects[views_rss][version]                 = 2.0-rc4
     projects[webform][version]                   = 4.14
     projects[xmlsitemap][version]                = 2.3
