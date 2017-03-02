@@ -29,7 +29,7 @@
     projects[better_formats][version]            = 1.0-beta2
     projects[block_class][version]               = 2.3
     projects[boxes][version]                     = 1.2
-    projects[ccl][version]                       = 1.5
+    projects[ccl][version]                       = 1.6
     projects[chrome_frame][version]              = 1.0-alpha2
     projects[computed_field][version]            = 1.1
     projects[context][version]                   = 3.7
