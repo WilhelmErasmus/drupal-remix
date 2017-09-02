@@ -22,7 +22,7 @@ function remix_get_initial_variables() {
   return array(
     'themes' => array(
       'default' => 'zen_slate',
-      'admin'   => 'seven',
+      'admin'   => 'adminimal',
     ),
   );
 }

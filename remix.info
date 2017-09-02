@@ -142,6 +142,8 @@
     dependencies[] = xmlsitemap_custom
     dependencies[] = xmlsitemap_menu
     dependencies[] = xmlsitemap_node
+    dependencies[] = adminimal
+    dependencies[] =
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Profile Files                                                              │
 ; └────────────────────────────────────────────────────────────────────────────┘
