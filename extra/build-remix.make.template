@@ -18,5 +18,5 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
 		projects[remix][type]                  = profile
 		projects[remix][download][type]        = git
-		projects[remix][download][url]         = git://github.com/RiaanBurger/drupal-remix.git
+		projects[remix][download][url]         = git://github.com/WilhelmErasmus/drupal-remix.git
 		projects[remix][download][branch]      = master

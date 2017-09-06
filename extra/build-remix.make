@@ -12,11 +12,11 @@
 ; └────────────────────────────────────────────────────────────────────────────┘
     core                                         = 7.x
     api                                          = 2
-    projects[drupal][version]                    = 7.54
+    projects[drupal][version]                    = 7.57
 ; ┌────────────────────────────────────────────────────────────────────────────┐
 ; │ Modules                                                                    │
 ; └────────────────────────────────────────────────────────────────────────────┘
 		projects[remix][type]                  = profile
 		projects[remix][download][type]        = git
-		projects[remix][download][url]         = git://github.com/RiaanBurger/drupal-remix.git
+		projects[remix][download][url]         = git://github.com/WilhelmErasmus/drupal-remix.git
 		projects[remix][download][branch]      = master
